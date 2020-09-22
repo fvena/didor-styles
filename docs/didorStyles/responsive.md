@@ -79,7 +79,7 @@ Didor utiliza un mixin para generar los media query de forma sencilla. Este mixi
 </div>
 
 
-La sintáxis para utilizar el mixin es la siguiente:
+La sintaxis para utilizar el mixin es la siguiente:
 
 ``` scss
 // Mixin media

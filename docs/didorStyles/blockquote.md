@@ -2,6 +2,15 @@
 
 Las citas permiten añadir contenido de otra fuente dentro de tu documentación.
 
+## Configuración
+
+```scss
+$border-radius: 5px;
+$border-width: 1px;
+$border-style: solid;
+$border-color: color(gray6);
+```
+
 Para citar un contenido, envuelvelo con la etiqueta `<blockquote>`.
 
 ::: demo

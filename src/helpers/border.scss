@@ -11,9 +11,9 @@
 //
 
 .border {
-  border-color: color(border);
-  border-style: solid !important;
-  border-width: $border-width !important;
+  border-color: $border-color;
+  border-style: $border-style;
+  border-width: $border-width;
 }
 
 .no-border {
@@ -22,9 +22,9 @@
 
 @each $position in ('top', 'right', 'bottom', 'left') {
   .border-#{$position} {
-    border-#{$position}-width: $border-width !important;
-    border-#{$position}-style: solid !important;
-    border-#{$position}-color: color(border);
+    border-#{$position}-width: $border-width;
+    border-#{$position}-style: $border-style;
+    border-#{$position}-color: $border-color;
   }
 
   .no-border-#{$position} {
@@ -40,7 +40,7 @@
 // Se puede aplicar a:
 //   .rounded - Todas las esquinas a la vez
 //   .rounded-{top,right,bottom,left} - A las esquinas de un lado
-//   .rounded-{top,right}-{top,bottom} - Una esquina individualmente
+//   .rounded-{top,bottom}-{right,left} - Una esquina individualmente
 //   .rounded-circle - Redondea todas las esquinas hasta convertir al elemento en un círculo
 //   .no-rounded - Elimina todas las esquinas redondeadas
 //

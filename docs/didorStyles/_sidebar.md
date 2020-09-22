@@ -1,6 +1,6 @@
 - [Utilidades]
   - [Personalización](/didorStyles/customization.md)
-  - [Variables](/didorStyles/started.md)
+  - [Variables](/didorStyles/var.md)
   - [Funciones](/didorStyles/started.md)
   - [Mixins](/didorStyles/started.md)
   - [Cheatsheet](/didorStyles/started.md)
