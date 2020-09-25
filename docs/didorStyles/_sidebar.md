@@ -18,7 +18,6 @@
 
   - [Bordes](/didorStyles/border.md)
   - [Citas](/didorStyles/blockquote.md)
-  - [Clearfix](/didorStyles/clearfix.md)
   - [Código](/didorStyles/code.md)
   - [Colores](/didorStyles/colors.md)
   - [Float](/didorStyles/float.md)

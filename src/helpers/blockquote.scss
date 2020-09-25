@@ -1,8 +1,12 @@
-.blockquote--bordered {
-  border-left: 0.15rem solid color(brand);
-  padding-left: simple();
-}
+//
+// Citas
+//
+// Da estilo a una cita
+//
 
+//
+// Modifica la alineación de una cita
+//
 .blockquote--left {
   text-align: left;
 }
@@ -13,15 +17,26 @@
 
 .blockquote--right {
   text-align: right;
-
-  &.blockquote--bordered {
-    border-left: 0;
-    border-right: 0.15rem solid color(brand);
-    padding-left: 0;
-    padding-right: simple();
-  }
 }
 
+//
+// Añade un borde lateral a una cita, y lo posiciona según la alineación de la cita
+//
+.blockquote--bordered {
+  border-left: 0.15rem solid $blockquote-border-color;
+  padding-left: simple();
+}
+
+.blockquote--bordered.blockquote--right {
+  border-left: 0;
+  border-right: 0.15rem solid $blockquote-border-color;
+  padding-left: 0;
+  padding-right: simple();
+}
+
+//
+// Adaptación para pantallas pequeñas
+//
 @include media(portrait) {
   .blockquote--bordered {
     padding-left: half();

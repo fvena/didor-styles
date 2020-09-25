@@ -74,6 +74,6 @@ $breakpoints: (
   @if $breakpoint == 'all' {
     @return '';
   } @else {
-    @return '--' + $breakpoint;
+    @return '-' + $breakpoint;
   }
 }

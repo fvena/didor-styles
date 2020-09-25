@@ -129,6 +129,7 @@ blockquote,
 .blockquote {
   font-size: font-size(h5);
   line-height: line-height(h5);
+  color: $blockquote-text-color;
 
   p {
     font-size: font-size(h5);
@@ -141,7 +142,7 @@ blockquote,
 
   > footer,
   > .footer {
-    color: color(gray3);
+    color: $blockquote-footer-color;
     display: block;
     font-size: font-size(small1);
     font-style: italic;

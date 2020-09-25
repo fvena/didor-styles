@@ -68,6 +68,7 @@ $dark-theme: (
 //
 // Genera un listado de variables css con la paleta de colores
 //
+
 :root {
   @each $name, $color in $theme {
     --color-#{$name}: #{$color};
@@ -108,6 +109,9 @@ $dark-theme: (
 //
 // Modifica el color de fondo de un elemento
 //
+// Ejemplos:
+//   .background-brand   // El color de fondo se colorea con el color de la marca
+//
 
 @each $name, $color in $theme {
   .background-#{$name} {
@@ -129,6 +133,9 @@ $dark-theme: (
 // Color del texto
 //
 // Modifica el color del texto de un elemento
+//
+// Ejemplos:
+//   .color-brand   // El texto se colorea con el color de la marca
 //
 
 @each $name, $color in $theme {

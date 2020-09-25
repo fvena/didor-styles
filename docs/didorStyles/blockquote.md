@@ -1,47 +1,48 @@
 # Citas
 
-Las citas permiten añadir contenido de otra fuente dentro de tu documentación.
+Las citas permiten citar contenido de otra fuente dentro de tu documentación.
 
 ## Configuración
 
 ```scss
-$border-radius: 5px;
-$border-width: 1px;
-$border-style: solid;
-$border-color: color(gray6);
+$blockquote-text-color: color(gray2);
+$blockquote-footer-color: color(gray3);
+$blockquote-border-color: color(brand);
 ```
 
-Para citar un contenido, envuelvelo con la etiqueta `<blockquote>`.
+## Alinear citas
 
-::: demo
-<blockquote class="blockquote margin-bottom-double width-75 width-palm-100 margin-auto">
+Para citar un contenido, envuélvelo con la etiqueta `<blockquote>`. Puedes alinera una citar a ambos lados o centrada
+
+```demo
+<blockquote class="margin-bottom-double width-75 width-palm-100 margin-auto">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 
-<blockquote class="blockquote blockquote--center margin-bottom-double width-75 width-palm-100 margin-auto">
+<blockquote class="blockquote--center margin-bottom-double width-75 width-palm-100 margin-auto">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 
-<blockquote class="blockquote blockquote--right width-75 width-palm-100 margin-auto">
+<blockquote class="blockquote--right width-75 width-palm-100 margin-auto">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
-:::
+```
 
 ``` html
-<blockquote class="blockquote">
+<blockquote>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 
-<blockquote class="blockquote blockquote--center">
+<blockquote class="blockquote--center">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 
-<blockquote class="blockquote blockquote--right">
+<blockquote class="blockquote--right">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
@@ -49,25 +50,27 @@ Para citar un contenido, envuelvelo con la etiqueta `<blockquote>`.
 
 ## Citas con borde
 
-::: demo
-<blockquote class="blockquote blockquote--bordered margin-bottom-double width-75 width-palm-100 margin-auto">
+Puedes resaltar una cita añadiendo un borde. Este se alineará igual que la cita.
+
+```demo
+<blockquote class="blockquote--bordered margin-bottom-double width-75 width-palm-100 margin-auto">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 
-<blockquote class="blockquote blockquote--bordered blockquote--right width-75 width-palm-100 margin-auto">
+<blockquote class="blockquote--bordered blockquote--right width-75 width-palm-100 margin-auto">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
-:::
+```
 
 ``` html
-<blockquote class="blockquote blockquote--bordered">
+<blockquote class="blockquote--bordered">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 
-<blockquote class="blockquote blockquote--bordered blockquote--right">
+<blockquote class="blockquote--bordered blockquote--right">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>

@@ -50,35 +50,33 @@
 //
 // .display-print-{value}
 //
-// {value} Indica el tamaño del margen
+// {value} Indica el modo de visualización
 //   - none, inline, inline-block, block
 //
 // Ejemplos:
 //   .display-print-none     // Oculta un elemento al imprimir la página
 //   .display-print-block    // Muestra un elemento como bloque al imprimir la página
 //
-@if $print {
-  .display-print-none {
-    @media print {
-      display: none !important;
-    }
+.display-print-none {
+  @media print {
+    display: none !important;
   }
+}
 
-  .display-print-inline {
-    @media print {
-      display: inline !important;
-    }
+.display-print-inline {
+  @media print {
+    display: inline !important;
   }
+}
 
-  .display-print-inline-block {
-    @media print {
-      display: inline-block !important;
-    }
+.display-print-inline-block {
+  @media print {
+    display: inline-block !important;
   }
+}
 
-  .display-print-block {
-    @media print {
-      display: block !important;
-    }
+.display-print-block {
+  @media print {
+    display: block !important;
   }
 }

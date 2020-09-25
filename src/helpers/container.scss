@@ -1,3 +1,10 @@
+//
+// Contenedor fijo
+//
+// El contenedor se adapta hasta una anchura máxima, superada esta,
+// su anchura permanece fija y se mantiene centrado horizontalmente.
+//
+
 $container-width: (
   'palm': $container-width-palm,
   'lap': $container-width-lap,
@@ -5,6 +12,14 @@ $container-width: (
   'desk': $container-width-desk,
   'large': $container-width-large,
 ) !default;
+
+.container {
+  @each $breakpoint-name, $container-max-width in $container-width {
+    @include media($breakpoint-name) {
+      max-width: px2em($container-max-width);
+    }
+  }
+}
 
 .container,
 .container--fluid {
@@ -23,13 +38,11 @@ $container-width: (
   }
 }
 
-.container {
-  @each $breakpoint-name, $container-max-width in $container-width {
-    @include media($breakpoint-name) {
-      max-width: px2em($container-max-width);
-    }
-  }
-}
+//
+// Contenedor fluido
+//
+// El contenedor se adapta al 100% del ancho de la pantalla
+//
 
 .container--fluid {
   max-width: 100%;

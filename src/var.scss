@@ -194,13 +194,20 @@ $size-percentages: (
   '100': 100%,
 ) !default;
 
-/**
- * BORDES
- */
+//
+// BORDES
+//
 $border-width: 1px !default;
 $border-style: solid !default;
 $border-color: color(gray6) !default;
 $border-radius: 5px !default;
+
+//
+// Citas
+//
+$blockquote-text-color: color(gray2) !default;
+$blockquote-footer-color: color(gray3) !default;
+$blockquote-border-color: color(brand) !default;
 
 /**
  * Z-INDEX OF LAYERS
@@ -248,12 +255,6 @@ $desk: 1600px !default; // ~100em
  */
 $mobile-first: false !default;
 $responsive: true !default;
-
-/**
- * Print
- * Indica si el contenido es susceptible de ser imprimido o guardado como pdf
- */
-$print: false !default;
 
 .demo-container > * {
   margin-bottom: 0;
