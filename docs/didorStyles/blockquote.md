@@ -1,35 +1,38 @@
 # Citas
 
-Las citas permiten citar contenido de otra fuente dentro de tu documentación.
+Te permiten citar contenido de otra fuente dentro de forma elegante en tu aplicación.
 
 ## Configuración
 
 ```scss
-$blockquote-text-color: color(gray2);
-$blockquote-footer-color: color(gray3);
+$blockquote-color: color(gray4);
 $blockquote-border-color: color(brand);
 ```
 
-## Alinear citas
+Para citar un contenido, envuélvelo con la etiqueta `<blockquote>`.
 
-Para citar un contenido, envuélvelo con la etiqueta `<blockquote>`. Puedes alinera una citar a ambos lados o centrada
+## Alineación
 
-```demo
-<blockquote class="margin-bottom-double width-75 width-palm-100 margin-auto">
+Puedes modificar la alineación del contenido mediante las clases: `blockquote--left`, `blockquote--center` o `blockquote--right`.
+
+::: page--blockout
+
+<blockquote class="blockquote">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 
-<blockquote class="blockquote--center margin-bottom-double width-75 width-palm-100 margin-auto">
+<blockquote class="blockquote blockquote--center">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
 
-<blockquote class="blockquote--right width-75 width-palm-100 margin-auto">
+<blockquote class="blockquote blockquote--right">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
   <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
-```
+
+:::
 
 ``` html
 <blockquote>
@@ -50,19 +53,19 @@ Para citar un contenido, envuélvelo con la etiqueta `<blockquote>`. Puedes alin
 
 ## Citas con borde
 
-Puedes resaltar una cita añadiendo un borde. Este se alineará igual que la cita.
+Con el modificador `blockquote--bordered`, añadirás un borde lateral según la alineación de la cita.
 
-```demo
-<blockquote class="blockquote--bordered margin-bottom-double width-75 width-palm-100 margin-auto">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
+::: page--blockout
+  <blockquote class="blockquote blockquote--bordered">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+  </blockquote>
 
-<blockquote class="blockquote--bordered blockquote--right width-75 width-palm-100 margin-auto">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-</blockquote>
-```
+  <blockquote class="blockquote blockquote--bordered blockquote--right">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+  </blockquote>
+:::
 
 ``` html
 <blockquote class="blockquote--bordered">

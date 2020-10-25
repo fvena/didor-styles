@@ -15,30 +15,13 @@ $border-color: color(gray6);
 
 Puedes añadir un borde en todos los lados de un elemento o solo en uno.
 
-```demo
-<template>
-  <div>
-    <div class="block border">.border</div>
-    <div class="block border-top">.border-top</div>
-    <div class="block border-right">.border-right</div>
-    <div class="block border-bottom">.border-bottom</div>
-    <div class="block border-left">.border-left</div>
-  </div>
-</template>
-
-<style>
-  .block {
-    color: var(--color-gray3);
-    background-color: var(--color-gray7);
-    border-color: var(--color-gray5);
-    border-width: 2px !important;
-    border-radius: 0;
-    text-align: center;
-    padding: 1.6rem 3.2rem;
-    margin: 1.6rem;
-  }
-</style>
-```
+:::page--border
+  <div class="block-border border" data-name=".border"></div>
+  <div class="block-border border-top" data-name=".border-top"></div>
+  <div class="block-border border-right" data-name=".border-right"></div>
+  <div class="block-border border-bottom" data-name=".border-bottom"></div>
+  <div class="block-border border-left" data-name=".border-left"></div>
+:::
 
 ```html
 <!-- Todos los lados -->
@@ -55,30 +38,13 @@ Puedes añadir un borde en todos los lados de un elemento o solo en uno.
 
 Puedes eliminar un borde en todos los lados de un elemento o solo en uno.
 
-```demo
-<template>
-  <div>
-    <div class="block no-border">.no-border</div>
-    <div class="block border no-border-top">.no-border-top</div>
-    <div class="block border no-border-right">.no-border-right</div>
-    <div class="block border no-border-bottom">.no-border-bottom</div>
-    <div class="block border no-border-left">.no-border-left</div>
-  </div>
-</template>
-
-<style>
-  .block {
-    color: var(--color-gray3);
-    background-color: var(--color-gray7);
-    border-color: var(--color-gray5);
-    border-width: 2px !important;
-    border-radius: 0;
-    text-align: center;
-    padding: 1.6rem 3.2rem;
-    margin: 1.6rem;
-  }
-</style>
-```
+:::page--border
+  <div class="block-border no-border" data-name=".no-border"></div>
+  <div class="block-border border no-border-top" data-name=".no-border-top"></div>
+  <div class="block-border border no-border-right" data-name=".no-border-right"></div>
+  <div class="block-border border no-border-bottom" data-name=".no-border-bottom"></div>
+  <div class="block-border border no-border-left" data-name=".no-border-left"></div>
+:::
 
 ```html
 <!-- Todos los lados -->
@@ -131,6 +97,7 @@ Modifica el color del borde por defecto con las siguientes clases.
 
 Puedes redondear todos los bordes de un elemento, de un solo lado, o de los lados horizontales y verticales.
 
+<<<<<<< HEAD
 ```demo
 <template>
   <div>
@@ -159,17 +126,50 @@ Puedes redondear todos los bordes de un elemento, de un solo lado, o de los lado
   }
 </style>
 ```
+=======
+<div class="page--border margin-bottom-double" style="grid-template-columns: repeat(4, 1fr);">
+  <div class="block-border border rounded" data-name=".rounded"></div>
+</div>
+
+<div class="page--border margin-bottom-double" style="grid-template-columns: repeat(4, 1fr);">
+  <div class="block-border border rounded-top" data-name=".rounded-top"></div>
+  <div class="block-border border rounded-right" data-name=".rounded-right"></div>
+  <div class="block-border border rounded-bottom" data-name=".rounded-bottom"></div>
+  <div class="block-border border rounded-left" data-name=".rounded-left"></div>
+</div>
+
+<div class="page--border margin-bottom-double" style="grid-template-columns: repeat(4, 1fr);">
+  <div class="block-border border rounded-top-left" data-name=".rounded-top-left"></div>
+  <div class="block-border border rounded-top-right" data-name=".rounded-top-right"></div>
+  <div class="block-border border rounded-bottom-right" data-name=".rounded-bottom-right"></div>
+  <div class="block-border border rounded-bottom-left" data-name=".rounded-bottom-left"></div>
+</div>
+
+<div class="page--border" style="grid-template-columns: repeat(4, 1fr);">
+  <div class="block-border border rounded no-rounded" data-name="no-rounded"></div>
+  <div class="block-border border rounded-circle" data-name=".rounded-circle"></div>
+</div>
+>>>>>>> feat(demo): añadiendo estilos específicos para la guía de estilos
 
 ```html
 <!-- Todos los lados -->
 <div class="rounded">...</div>
 
-<!-- Un solo lado -->
+<!-- Solo un lado -->
 <div class="rounded-top">...</div>
 <div class="rounded-right">...</div>
 <div class="rounded-bottom">...</div>
 <div class="rounded-left">...</div>
 
+<<<<<<< HEAD
+=======
+<!-- Solo una esquina -->
+<div class="rounded-top-left">...</div>
+<div class="rounded-top-right">...</div>
+<div class="rounded-bottom-right">...</div>
+<div class="rounded-bottom-left">...</div>
+
+>>>>>>> feat(demo): añadiendo estilos específicos para la guía de estilos
 <!-- Ningún lado -->
 <div class="no-rounded">...</div>
 

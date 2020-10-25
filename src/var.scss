@@ -17,31 +17,6 @@ $brand-dark: hsl(190, 70%, 35%) !default;
 $brand: hsl(190, 65%, 45%) !default;
 $brand-light: hsl(190, 65%, 65%) !default;
 $brand-lighter: hsl(190, 60%, 85%) !default;
-$brand-a20: hsla(190, 65%, 45%, 0.2) !default;
-
-//
-// Colores de Estado (Feedback)
-//
-$warning-darker: hsl(39, 100%, 35%) !default;
-$warning-dark: hsl(41, 100%, 45%) !default;
-$warning: hsl(41, 100%, 60%) !default;
-$warning-light: hsl(41, 100%, 75%) !default;
-$warning-lighter: hsl(41, 100%, 90%) !default;
-$warning-a20: hsla(41, 100%, 60%, 0.2) !default;
-
-$success-darker: hsl(94, 80%, 30%) !default;
-$success-dark: hsl(94, 67%, 41%) !default;
-$success: hsl(94, 52%, 50%) !default;
-$success-light: hsl(94, 66%, 70%) !default;
-$success-lighter: hsl(94, 70%, 90%) !default;
-$success-a20: hsla(94, 52%, 52%, 0.2) !default;
-
-$danger-darker: hsl(6, 100%, 30%) !default;
-$danger-dark: hsl(6, 100%, 45%) !default;
-$danger: hsl(6, 100%, 60%) !default;
-$danger-light: hsl(6, 100%, 75%) !default;
-$danger-lighter: hsl(6, 100%, 90%) !default;
-$danger-a20: hsla(6, 100%, 60%, 0.2) !default;
 
 //
 // Colores Neutros
@@ -57,7 +32,27 @@ $color-gray8: hsl(220, 20%, 99%) !default;
 
 $color-black: hsl(0, 0%, 0%) !default;
 $color-white: hsl(0, 0%, 100%) !default;
-$color-transparent: transparent !default;
+
+//
+// Colores de Estado (Feedback)
+//
+$warning-darker: hsl(39, 100%, 35%) !default;
+$warning-dark: hsl(41, 100%, 45%) !default;
+$warning: hsl(41, 100%, 60%) !default;
+$warning-light: hsl(41, 100%, 75%) !default;
+$warning-lighter: hsl(41, 100%, 90%) !default;
+
+$success-darker: hsl(94, 80%, 30%) !default;
+$success-dark: hsl(94, 67%, 41%) !default;
+$success: hsl(94, 52%, 50%) !default;
+$success-light: hsl(94, 66%, 70%) !default;
+$success-lighter: hsl(94, 70%, 90%) !default;
+
+$danger-darker: hsl(6, 100%, 30%) !default;
+$danger-dark: hsl(6, 100%, 45%) !default;
+$danger: hsl(6, 100%, 60%) !default;
+$danger-light: hsl(6, 100%, 75%) !default;
+$danger-lighter: hsl(6, 100%, 90%) !default;
 
 //
 // Colores Semánticos
@@ -200,7 +195,23 @@ $size-percentages: (
 $border-width: 1px !default;
 $border-style: solid !default;
 $border-color: color(gray6) !default;
-$border-radius: 5px !default;
+$border-radius: 10px !default;
+
+/**
+ * BLOCKQUOTE
+ */
+$blockquote-color: color(gray4) !default;
+$blockquote-border-color: color(brand) !default;
+
+/**
+ * CODE
+ */
+$code-color: color(brand-dark) !default;
+$code-background: color(gray2) !default;
+$inline-code-color: color(brand-dark) !default;
+$inline-code-background: color(gray7) !default;
+$kbd-color: color(gray8) !default;
+$kbd-background: color(gray2) !default;
 
 //
 // Citas

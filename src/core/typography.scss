@@ -127,13 +127,15 @@ abbr[data-original-title] {
 // Quotes.
 blockquote,
 .blockquote {
+  color: $blockquote-color;
   font-size: font-size(h5);
   line-height: line-height(h5);
-  color: $blockquote-text-color;
+  margin: double() 0;
 
   p {
     font-size: font-size(h5);
     line-height: line-height(h5);
+    padding-right: 30%;
   }
 
   p:last-of-type {
@@ -146,6 +148,7 @@ blockquote,
     display: block;
     font-size: font-size(small1);
     font-style: italic;
+    padding-right: 30%;
 
     &::before {
       content: '\2014 \00A0'; // em dash, nbsp

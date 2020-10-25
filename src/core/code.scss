@@ -1,9 +1,10 @@
 // Code block
 code,
 pre {
-  background-color: color(gray7);
+  background-color: $code-background;
+  color: $code-color;
   font-family: font-family(monospace);
-  font-size: font-size(small2);
+  font-size: font-size(base);
   font-weight: font-weight(normal);
   line-height: 1.2rem;
 }
@@ -47,9 +48,10 @@ pre {
 
 // Inline code
 :not(pre) > code {
+  background-color: $inline-code-background;
   border-radius: $border-radius;
-  color: color(brand-dark);
-  font-size: 0.8em;
+  color: $inline-code-color;
+  font-size: 0.9em;
   line-height: simple();
   padding: 0.1rem 0.3rem;
   white-space: nowrap;
@@ -57,9 +59,9 @@ pre {
 
 // Keyboard user input
 kbd {
-  background-color: color(gray2);
+  background-color: $kbd-background;
   border-radius: $border-radius;
-  color: #ffffff;
+  color: $kbd-color;
   font-family: font-family(monospace);
   font-size: 0.8em;
   line-height: simple();

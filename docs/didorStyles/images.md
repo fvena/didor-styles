@@ -2,58 +2,52 @@
 
 ## Imágenes adaptables
 
-Didor por defecto no modifica el tamaño de la imágenes, pero no permite que una imagen supere el tamaño de su contenedor, por lo que nunca podrán sobrepasar el ancho de la pantalla y verse cortada. Pero si la imagen es menor que su contenedor, esta no crecerá.
+Por defecto, Didor no modifica el tamaño de la imágenes, pero limita la anchura máxima de una imagen al tamaño de su contenedor para que nunca puede verse cortada. Por otro lado, si la anchura de la imagen es menor que su contenedor, se verá un espacio.
 
 Si queremos que una imagen crezca siempre ajustándose al ancho de su contenedor, debemos aplicar la clase `.image--fluid`.
 
-::: demo
-<p style="height: 150px" class="margin-bottom">
-  <img src="/aidoo-landscape.png">
+<p class="margin-bottom">
+  <img src="/assets/lion.jpg" style="height: 150px" >
 </p>
 
-<p style="height: 48vw">
-  <img src="/aidoo-landscape.png" class="image--fluid">
+<p>
+  <img src="/assets/lion.jpg" class="image--fluid">
 </p>
-:::
 
 ``` html
-<img src="/aidoo-landscape.png">
+<img src="/assets/lion.jpg">
 
-<img src="/aidoo-landscape.png" class="image--fluid">
+<img src="/assets/lion.jpg" class="image--fluid">
 ```
 
 ## Imágenes enmarcadas
 
 Didor te permite un par de variaciones para enmarcar una imagen.
 
-::: demo
 <div style="height: 210px">
-  <img src="/aidoo-square.png" class="image--frame margin-right-double" style="vertical-align: top">
+  <img src="/assets/lion.jpg" class="image--frame margin-right-double" style="vertical-align: top">
 
-  <img src="/aidoo-square.png" class="image--polaroid">
+  <img src="/assets/lion.jpg" class="image--polaroid">
 </div>
-:::
 
 ``` html
-<img src="/aidoo-square.png" class="image--frame">
+<img src="/assets/lion.jpg" class="image--frame">
 
-<img src="/aidoo-square.png" class="image--polaroid">
+<img src="/assets/lion.jpg" class="image--polaroid">
 ```
 
 ## Pies de foto
 
 Con la etiqueta HTML `<figure>` podemos añadir pies de foto o la autoría de un contenido multimedia.
 
-::: demo
 <figure style="height: 180px">
-  <img src="/aidoo-landscape.png">
+  <img src="/assets/lion.jpg">
   <figcaption>Logotipo de la Aidoo</figcaption>
 </figure>
-:::
 
 ``` html
 <figure>
-  <img src="/aidoo-landscape.png">
+  <img src="/assets/lion.jpg">
   <figcaption>Logotipo de la Aidoo</figcaption>
 </figure>
 ```

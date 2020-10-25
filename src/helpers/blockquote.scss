@@ -13,6 +13,12 @@
 
 .blockquote--center {
   text-align: center;
+
+  p,
+  > footer,
+  > .footer {
+    padding: 0 15%;
+  }
 }
 
 .blockquote--right {
@@ -32,6 +38,19 @@
   border-right: 0.15rem solid $blockquote-border-color;
   padding-left: 0;
   padding-right: simple();
+  p,
+  > footer,
+  > .footer {
+    padding-left: 30%;
+    padding-right: 0;
+  }
+
+  &.blockquote--bordered {
+    border-left: 0;
+    border-right: 0.25rem solid $blockquote-border-color;
+    padding-left: 0;
+    padding-right: simple();
+  }
 }
 
 //

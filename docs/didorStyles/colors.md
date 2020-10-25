@@ -8,9 +8,103 @@ Los colores se dividen en tres grupos:
 * **Colores neutros** - Los colores neutros conforman la mayor parte del diseño y se utilizan para textos, fondos y bordes.
 * **Colores de estado** - Utiliza un color coherente al estado (información, correcto, atención, error).
 
-## Colores de fondo
+## Configuración
 
-Las clases para aplicar un color de fondo siguen el patrón `.backgroun-{color}`.
+```scss
+/** Colores de Marca */
+$brand-darker: hsl(190, 90%, 25%);
+$brand-dark: hsl(190, 70%, 35%);
+$brand: hsl(190, 65%, 45%);
+$brand-light: hsl(190, 65%, 65%);
+$brand-lighter: hsl(190, 60%, 85%);
+
+/** Colores Neutros */
+$color-gray1: hsl(196, 25%, 12%);
+$color-gray2: hsl(198, 17%, 28%);
+$color-gray3: hsl(200, 5%, 46%);
+$color-gray4: hsl(198, 7%, 64%);
+$color-gray5: hsl(202, 13%, 83%);
+$color-gray6: hsl(206, 17%, 92%);
+$color-gray7: hsl(220, 18%, 97%);
+$color-gray8: hsl(220, 20%, 99%);
+
+$color-black: hsl(0, 0%, 0%);
+$color-white: hsl(0, 0%, 100%);
+
+/** Colores de Estado (Feedback) */
+$warning-darker: hsl(39, 100%, 35%);
+$warning-dark: hsl(41, 100%, 45%);
+$warning: hsl(41, 100%, 60%);
+$warning-light: hsl(41, 100%, 75%);
+$warning-lighter: hsl(41, 100%, 90%);
+
+$success-darker: hsl(94, 80%, 30%);
+$success-dark: hsl(94, 67%, 41%);
+$success: hsl(94, 52%, 50%);
+$success-light: hsl(94, 66%, 70%);
+$success-lighter: hsl(94, 70%, 90%);
+
+$danger-darker: hsl(6, 100%, 30%);
+$danger-dark: hsl(6, 100%, 45%);
+$danger: hsl(6, 100%, 60%);
+$danger-light: hsl(6, 100%, 75%);
+$danger-lighter: hsl(6, 100%, 90%);
+```
+
+## Colores de Marca
+
+<div class="page--color margin-bottom-double">
+  <div class="block--color background-brand-darker" data-name="brand-darker"></div>
+  <div class="block--color background-brand-dark" data-name="brand-dark"></div>
+  <div class="block--color background-brand" data-name="brand"></div>
+  <div class="block--color background-brand-light" data-name="brand-light"></div>
+  <div class="block--color background-brand-lighter" data-name="brand-lighter"></div>
+</div>
+
+## Colores Neutros
+
+<div class="page--color margin-bottom-double">
+  <div class="block--color background-black" data-name="black"></div>
+  <div class="block--color background-gray1" data-name="gray1"></div>
+  <div class="block--color background-gray2" data-name="gray2"></div>
+  <div class="block--color background-gray3" data-name="gray3"></div>
+  <div class="block--color background-gray4" data-name="gray4"></div>
+  <div class="block--color background-gray5" data-name="gray5"></div>
+  <div class="block--color background-gray6" data-name="gray6"></div>
+  <div class="block--color background-gray7" data-name="gray7"></div>
+  <div class="block--color background-gray8" data-name="gray8"></div>
+  <div class="block--color background-white" data-name="white"></div>
+</div>
+
+## Colores de Estado
+
+<div class="page--color">
+  <div class="block--color background-warning-darker" data-name="warning-darker"></div>
+  <div class="block--color background-warning-dark" data-name="warning-dark"></div>
+  <div class="block--color background-warning" data-name="warning"></div>
+  <div class="block--color background-warning-light" data-name="warning-light"></div>
+  <div class="block--color background-warning-lighter" data-name="warning-lighter"></div>
+
+  <div class="block--color background-success-darker" data-name="success-darker"></div>
+  <div class="block--color background-success-dark" data-name="success-dark"></div>
+  <div class="block--color background-success" data-name="success"></div>
+  <div class="block--color background-success-light" data-name="success-light"></div>
+  <div class="block--color background-success-lighter" data-name="success-lighter"></div>
+
+  <div class="block--color background-danger-darker" data-name="danger-darker"></div>
+  <div class="block--color background-danger-dark" data-name="danger-dark"></div>
+  <div class="block--color background-danger" data-name="danger"></div>
+  <div class="block--color background-danger-light" data-name="danger-light"></div>
+  <div class="block--color background-danger-lighter" data-name="danger-lighter"></div>
+</div>
+
+## Color del fondo
+
+Las clases para aplicar un color de fondo siguen el patrón:
+
+:::text-center
+`.background-{color}`
+:::
 
 ``` html
 <div class="background-brand">Fondo color de la marca</div>
@@ -18,9 +112,13 @@ Las clases para aplicar un color de fondo siguen el patrón `.backgroun-{color}`
 <div class="background-transparent">Fondo transparente</div>
 ```
 
-## Colores de texto
+## Color del texto
 
-Las clases para aplicar un color de texto siguen el patrón `.color-{color}`.
+Las clases para aplicar un color de texto siguen el patrón:
+
+:::text-center
+`.color-{color}`
+:::
 
 ``` html
 <div class="color-brand">Fondo color de la marca</div>
@@ -29,111 +127,15 @@ Las clases para aplicar un color de texto siguen el patrón `.color-{color}`.
 
 ## Función
 
-Podemos utilizar un color en nuestros archivos `sass` mediante la función `color(...)`.
+Podemos utilizar un color en nuestros archivos `sass` mediante la función:
+
+:::text-center
+`color(...)`
+:::
 
 ``` scss
 .elemento {
   background-color: color(brand);
+  color: color(brand-darker);
 }
 ```
-
-::: demo
-<h5 class="margin-bottom">Colores de Marca</h5>
-<div class="page--color margin-bottom-double">
-  <div class="page-block background-brand-darker">.background-brand-darker</div>
-  <div class="page-block background-brand-dark">.background-brand-dark</div>
-  <div class="page-block background-brand">.background-brand</div>
-  <div class="page-block background-brand-light">.background-brand-light</div>
-  <div class="page-block background-brand-lighter color-brand">.background-brand-lighter</div>
-  <div class="page-block background-brand-a20 color-brand">.background-brand-a20</div>
-</div>
-
-<h5 class="margin-bottom">Colores Neutros</h5>
-<div class="page--color margin-bottom-double">
-  <div class="page-block background-black">.background-black</div>
-  <div class="page-block background-gray1">.background-gray1</div>
-  <div class="page-block background-gray2">.background-gray2</div>
-  <div class="page-block background-gray3">.background-gray3</div>
-  <div class="page-block background-gray4">.background-gray4</div>
-  <div class="page-block background-gray5">.background-gray5</div>
-  <div class="page-block background-gray6">.background-gray6</div>
-  <div class="page-block background-gray7 color-gray1">.background-gray7</div>
-  <div class="page-block background-white color-gray1 border">.background-white</div>
-  <div class="page-block background-transparent color-gray1 border">.background-transparent</div>
-</div>
-
-<h5 class="margin-bottom">Colores de Estado</h5>
-<div class="page--color">
-  <div class="page-block background-warning-darker">.background-warning-darker</div>
-  <div class="page-block background-warning-dark">.background-warning-dark</div>
-  <div class="page-block background-warning">.background-warning</div>
-  <div class="page-block background-warning-light">.background-warning-light</div>
-  <div class="page-block background-warning-lighter color-warning">.background-warning-lighter</div>
-  <div class="page-block background-warning-a20 color-warning">.background-warning-a20</div>
-
-  <div class="page-block background-success-darker">.background-success-darker</div>
-  <div class="page-block background-success-dark">.background-success-dark</div>
-  <div class="page-block background-success">.background-success</div>
-  <div class="page-block background-success-light">.background-success-light</div>
-  <div class="page-block background-success-lighter color-success">.background-success-lighter</div>
-  <div class="page-block background-success-a20 color-success">.background-success-a20</div>
-
-  <div class="page-block background-danger-darker">.background-danger-darker</div>
-  <div class="page-block background-danger-dark">.background-danger-dark</div>
-  <div class="page-block background-danger">.background-danger</div>
-  <div class="page-block background-danger-light">.background-danger-light</div>
-  <div class="page-block background-danger-lighter color-danger">.background-danger-lighter</div>
-  <div class="page-block background-danger-a20 color-danger">.background-danger-a20</div>
-</div>
-:::
-
-## Color de texto
-
-::: demo
-<h5 class="margin-bottom">Colores de Marca</h5>
-<div class="page--text margin-bottom-double">
-  <div class="page-block color-brand-darker">.color-brand-darker</div>
-  <div class="page-block color-brand-dark">.color-brand-dark</div>
-  <div class="page-block color-brand">.color-brand</div>
-  <div class="page-block color-brand-light">.color-brand-light</div>
-  <div class="page-block color-brand-lighter">.color-brand-lighter</div>
-  <div class="page-block color-brand-a20">.color-brand-a20</div>
-</div>
-
-<h5 class="margin-bottom">Colores Neutros</h5>
-<div class="page--text margin-bottom-double">
-  <div class="page-block color-black">.color-black</div>
-  <div class="page-block color-gray1">.color-gray1</div>
-  <div class="page-block color-gray2">.color-gray2</div>
-  <div class="page-block color-gray3">.color-gray3</div>
-  <div class="page-block color-gray4">.color-gray4</div>
-  <div class="page-block color-gray5">.color-gray5</div>
-  <div class="page-block color-gray6">.color-gray6</div>
-  <div class="page-block color-gray7 background-gray5">.color-gray7</div>
-  <div class="page-block color-white background-gray5">.color-white</div>
-</div>
-
-<h5 class="margin-bottom">Colores de Estado</h5>
-<div class="page--text">
-  <div class="page-block color-warning-darker">.color-warning-darker</div>
-  <div class="page-block color-warning-dark">.color-warning-dark</div>
-  <div class="page-block color-warning">.color-warning</div>
-  <div class="page-block color-warning-light">.color-warning-light</div>
-  <div class="page-block color-warning-lighter">.color-warning-lighter</div>
-  <div class="page-block color-warning-a20">.color-warning-a20</div>
-
-  <div class="page-block color-success-darker">.color-success-darker</div>
-  <div class="page-block color-success-dark">.color-success-dark</div>
-  <div class="page-block color-success">.color-success</div>
-  <div class="page-block color-success-light">.color-success-light</div>
-  <div class="page-block color-success-lighter">.color-success-lighter</div>
-  <div class="page-block color-success-a20">.color-success-a20</div>
-
-  <div class="page-block color-danger-darker">.color-danger-darker</div>
-  <div class="page-block color-danger-dark">.color-danger-dark</div>
-  <div class="page-block color-danger">.color-danger</div>
-  <div class="page-block color-danger-light">.color-danger-light</div>
-  <div class="page-block color-danger-lighter">.color-danger-lighter</div>
-  <div class="page-block color-danger-a20">.color-danger-a20</div>
-</div>
-:::
