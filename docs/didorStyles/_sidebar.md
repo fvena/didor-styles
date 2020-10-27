@@ -1,9 +1,7 @@
 - [Utilidades]
-  - [Personalización](/didorStyles/customization.md)
-  - [Variables](/didorStyles/var.md)
-  - [Funciones](/didorStyles/started.md)
-  - [Mixins](/didorStyles/started.md)
-  - [Cheatsheet](/didorStyles/started.md)
+
+  - [Comenzar](/didorStyles/getStarted.md)
+  - [Chuleta](/didorStyles/cheatsheet.md)
 
 - [Layout]
 

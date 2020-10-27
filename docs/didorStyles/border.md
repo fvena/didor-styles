@@ -97,36 +97,6 @@ Modifica el color del borde por defecto con las siguientes clases.
 
 Puedes redondear todos los bordes de un elemento, de un solo lado, o de los lados horizontales y verticales.
 
-<<<<<<< HEAD
-```demo
-<template>
-  <div>
-    <div class="block border rounded">.rounded</div>
-
-    <div class="block border rounded-top">.rounded-top</div>
-    <div class="block border rounded-right">.rounded-right</div>
-    <div class="block border rounded-bottom">.rounded-bottom</div>
-    <div class="block border rounded-left">.rounded-left</div>
-
-    <div class="block border rounded no-rounded">no-rounded</div>
-    <div class="block border rounded-circle">.rounded-circle</div>
-  </div>
-</template>
-
-<style>
-  .block {
-    color: var(--color-gray3);
-    background-color: var(--color-gray7);
-    border-color: var(--color-gray5);
-    border-width: 2px !important;
-    border-radius: 0;
-    text-align: center;
-    padding: 1.6rem 3.2rem;
-    margin: 1.6rem;
-  }
-</style>
-```
-=======
 <div class="page--border margin-bottom-double" style="grid-template-columns: repeat(4, 1fr);">
   <div class="block-border border rounded" data-name=".rounded"></div>
 </div>
@@ -149,7 +119,6 @@ Puedes redondear todos los bordes de un elemento, de un solo lado, o de los lado
   <div class="block-border border rounded no-rounded" data-name="no-rounded"></div>
   <div class="block-border border rounded-circle" data-name=".rounded-circle"></div>
 </div>
->>>>>>> feat(demo): añadiendo estilos específicos para la guía de estilos
 
 ```html
 <!-- Todos los lados -->
@@ -161,15 +130,12 @@ Puedes redondear todos los bordes de un elemento, de un solo lado, o de los lado
 <div class="rounded-bottom">...</div>
 <div class="rounded-left">...</div>
 
-<<<<<<< HEAD
-=======
 <!-- Solo una esquina -->
 <div class="rounded-top-left">...</div>
 <div class="rounded-top-right">...</div>
 <div class="rounded-bottom-right">...</div>
 <div class="rounded-bottom-left">...</div>
 
->>>>>>> feat(demo): añadiendo estilos específicos para la guía de estilos
 <!-- Ningún lado -->
 <div class="no-rounded">...</div>
 
