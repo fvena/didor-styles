@@ -4,7 +4,7 @@
 
 Didor aplica el siguiente diseño por defecto a todas las tablas:
 
-::: demo
+::: page--table
 <table class=" no-margin">
   <thead>
     <tr>
@@ -16,19 +16,19 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
   </thead>
   <tbody>
     <tr>
-      <th>#</th>
+      <td>001</td>
       <td>Francisco</td>
       <td>Vena</td>
       <td>@fvena</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>002</td>
       <td>John</td>
       <td>Doe</td>
       <td>@johndoe</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>003</td>
       <td>Alice</td>
       <td>Doe</td>
       <td>@alicecooper</td>
@@ -49,19 +49,19 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
   </thead>
   <tbody>
     <tr>
-      <th>#</th>
+      <td>001</td>
       <td>Francisco</td>
       <td>Vena</td>
       <td>@fvena</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>002</td>
       <td>John</td>
       <td>Doe</td>
       <td>@johndoe</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>003</td>
       <td>Alice</td>
       <td>Doe</td>
       <td>@alicecooper</td>
@@ -72,7 +72,7 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
 
 ## Tablas a rayas
 
-::: demo
+::: page--table
 <table class="table--striped no-margin">
   <thead>
     <tr>
@@ -84,19 +84,19 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
   </thead>
   <tbody>
     <tr>
-      <th>#</th>
+      <td>001</td>
       <td>Francisco</td>
       <td>Vena</td>
       <td>@fvena</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>002</td>
       <td>John</td>
       <td>Doe</td>
       <td>@johndoe</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>003</td>
       <td>Alice</td>
       <td>Doe</td>
       <td>@alicecooper</td>
@@ -117,19 +117,19 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
   </thead>
   <tbody>
     <tr>
-      <th>#</th>
+      <td>001</td>
       <td>Francisco</td>
       <td>Vena</td>
       <td>@fvena</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>002</td>
       <td>John</td>
       <td>Doe</td>
       <td>@johndoe</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>003</td>
       <td>Alice</td>
       <td>Doe</td>
       <td>@alicecooper</td>
@@ -140,7 +140,7 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
 
 ## Hover sobre las filas
 
-::: demo
+::: page--table
 <table class="table--striped table--hover no-margin">
   <thead>
     <tr>
@@ -152,19 +152,19 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
   </thead>
   <tbody>
     <tr>
-      <th>#</th>
+      <td>001</td>
       <td>Francisco</td>
       <td>Vena</td>
       <td>@fvena</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>002</td>
       <td>John</td>
       <td>Doe</td>
       <td>@johndoe</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>003</td>
       <td>Alice</td>
       <td>Doe</td>
       <td>@alicecooper</td>
@@ -185,19 +185,19 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
   </thead>
   <tbody>
     <tr>
-      <th>#</th>
+      <td>001</td>
       <td>Francisco</td>
       <td>Vena</td>
       <td>@fvena</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>002</td>
       <td>John</td>
       <td>Doe</td>
       <td>@johndoe</td>
     </tr>
     <tr>
-      <th>#</th>
+      <td>003</td>
       <td>Alice</td>
       <td>Doe</td>
       <td>@alicecooper</td>
@@ -206,9 +206,9 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
 </table>
 ```
 
-## Tabla responsive
+## Tabla scrollable
 
-::: demo
+::: page--table
 <div class="table-wrapper width-50 width-palm-100">
   <table class="no-margin">
     <thead>
@@ -222,21 +222,21 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
     </thead>
     <tbody>
       <tr>
-        <th>#</th>
+        <td>001</td>
         <td>Francisco</td>
         <td>Vena</td>
         <td>@fvena</td>
         <td>fvena32@gmail.com</td>
       </tr>
       <tr>
-        <th>#</th>
+        <td>002</td>
         <td>John</td>
         <td>Doe</td>
         <td>@johndoe</td>
         <td>johndoe@email.com</td>
       </tr>
       <tr>
-        <th>#</th>
+        <td>003</td>
         <td>Alice</td>
         <td>Cooper</td>
         <td>@alicecooper</td>
@@ -261,21 +261,21 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
     </thead>
     <tbody>
       <tr>
-        <th>#</th>
+        <td>001</td>
         <td>Francisco</td>
         <td>Vena</td>
         <td>@fvena</td>
         <td>fvena32@gmail.com</td>
       </tr>
       <tr>
-        <th>#</th>
+        <td>002</td>
         <td>John</td>
         <td>Doe</td>
         <td>@johndoe</td>
         <td>johndoe@email.com</td>
       </tr>
       <tr>
-        <th>#</th>
+        <td>003</td>
         <td>Alice</td>
         <td>Cooper</td>
         <td>@alicecooper</td>
@@ -284,4 +284,87 @@ Didor aplica el siguiente diseño por defecto a todas las tablas:
     </tbody>
   </table>
 </div>
+```
+
+## Tabla adaptable
+
+:::text-center
+`.table--responsive`
+`.table-{breakpoint}--responsive`
+:::
+
+::: page--table
+<div class="width-50 width-palm-100">
+  <table class="table--responsive">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="#">001</td>
+        <td data-label="Nombre">Francisco</td>
+        <td data-label="Apellidos">Vena</td>
+        <td data-label="Username">@fvena</td>
+        <td data-label="Email">fvena32@gmail.com</td>
+      </tr>
+      <tr>
+        <td data-label="#">002</td>
+        <td data-label="Nombre">John</td>
+        <td data-label="Apellidos">Doe</td>
+        <td data-label="Username">@johndoe</td>
+        <td data-label="Email">johndoe@email.com</td>
+      </tr>
+      <tr>
+        <td data-label="#">003</td>
+        <td data-label="Nombre">Alice</td>
+        <td data-label="Apellidos">Cooper</td>
+        <td data-label="Username">@alicecooper</td>
+        <td data-label="Email">alicecooper@email.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+:::
+
+``` html
+<table class="table--responsive">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="#">001</td>
+      <td data-label="Nombre">Francisco</td>
+      <td data-label="Apellidos">Vena</td>
+      <td data-label="Username">@fvena</td>
+      <td data-label="Email">fvena32@gmail.com</td>
+    </tr>
+    <tr>
+      <td data-label="#">002</td>
+      <td data-label="Nombre">John</td>
+      <td data-label="Apellidos">Doe</td>
+      <td data-label="Username">@johndoe</td>
+      <td data-label="Email">johndoe@email.com</td>
+    </tr>
+    <tr>
+      <td data-label="#">003</td>
+      <td data-label="Nombre">Alice</td>
+      <td data-label="Apellidos">Cooper</td>
+      <td data-label="Username">@alicecooper</td>
+      <td data-label="Email">alicecooper@email.com</td>
+    </tr>
+  </tbody>
+</table>
 ```

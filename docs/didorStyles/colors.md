@@ -98,17 +98,31 @@ $danger-lighter: hsl(6, 100%, 90%);
   <div class="block--color background-danger-lighter" data-name="danger-lighter"></div>
 </div>
 
+## Degradados
+
+<div class="page--color margin-bottom-double">
+  <div class="block--color gradient-brand" data-name="brand"></div>
+  <div class="block--color gradient-warning" data-name="warning"></div>
+  <div class="block--color gradient-success" data-name="success"></div>
+  <div class="block--color gradient-danger" data-name="danger"></div>
+</div>
+
+<div class="page--color">
+  <div class="block--color gradient-light" data-name="light"></div>
+  <div class="block--color gradient-dark" data-name="dark"></div>
+</div>
+
 ## Color del fondo
 
 Las clases para aplicar un color de fondo siguen el patrón:
 
 :::text-center
 `.background-{color}`
+`.background-transparent`
 :::
 
 ``` html
 <div class="background-brand">Fondo color de la marca</div>
-<div class="background-brand-a20">Fondo transparente al 20% del color de la marca</div>
 <div class="background-transparent">Fondo transparente</div>
 ```
 
@@ -121,21 +135,85 @@ Las clases para aplicar un color de texto siguen el patrón:
 :::
 
 ``` html
-<div class="color-brand">Fondo color de la marca</div>
-<div class="color-gray1">Fondo transparente al 20% del color de la marca</div>
+<div class="color-brand">Texto con el color de la marca</div>
+<div class="color-gray1">Texto gris oscuro</div>
 ```
 
-## Función
+## Degradados
 
-Podemos utilizar un color en nuestros archivos `sass` mediante la función:
+Las clases para aplicar un degradado predefinido al fondo siguen el patrón:
+
+:::text-center
+`.gradient-{color}`
+:::
+
+Siendo las opciones posibles:
+
+:::text-center
+`brand`, `danger`, `warning`, `success`, `dark`, `light`.
+:::
+
+``` html
+<div class="gradient-brand">Degradado con los colores de la marca</div>
+<div class="gradient-warning">Degradado con los colores de atención</div>
+```
+
+## Funciones
+
+Podemos utilizar un color o un gradiente en nuestros archivos `sass` mediante las funciones:
 
 :::text-center
 `color(...)`
+`gradient(color, color)`
 :::
 
 ``` scss
 .elemento {
-  background-color: color(brand);
-  color: color(brand-darker);
+  background-color: gradient(brand-dark,brand-light);
+  color: color(brand);
+}
+```
+
+::: tip
+En los gradientes puedes utilizar tanto el nombre de un color predefinido como un color en hexadecimal, rgb, hsl, ...
+
+```scss
+gradient(brand-dark,brand-light);
+gradient(#80002f,#fb5067);
+gradient(rgb(120,0,47),rgb(251,80,103));
+gradient(hsl(338,100%,25%),hsl(352,96%,65%));
+```
+:::
+
+## Modo Oscuro
+
+Añadiendo el atributo, `data-theme` y asignándole algunos
+
+
+## Temas
+
+Al igual que hemos hecho con el modo oscuro, podemos crear y aplicar otros temas con el atributo `data-theme`. Simplemente define el tema y modifica las variables css que desees:
+
+```scss
+[data-theme='blue'] {
+  --color-brand-darker: #80002f;
+  --color-brand-dark: #bb1642;
+  --color-brand: #dd224e;
+  --color-brand-light: #fb5067;
+  --color-brand-lighter: #ff817a;
+
+  --font-family-base: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
+  --font-family-heading: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
+}
+
+[data-theme='blue'] {
+  --color-brand-darker: #80002f;
+  --color-brand-dark: #bb1642;
+  --color-brand: #dd224e;
+  --color-brand-light: #fb5067;
+  --color-brand-lighter: #ff817a;
+
+  --font-family-base: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
+  --font-family-heading: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
 }
 ```

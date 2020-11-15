@@ -17,20 +17,36 @@ th {
   vertical-align: top;
 }
 
-thead th {
+th {
+  background-color: color(gray7);
   border-bottom-color: color(border);
   border-top: 1px solid color(border);
+  color: color(gray2);
+  font-size: font-size(small2);
   font-weight: font-weight(bold);
+  text-transform: uppercase;
   vertical-align: bottom;
 
-  &:nth-child(1) {
+  &:first-of-type {
     border-left: 1px solid color(border);
     border-radius: $border-radius 0 0 $border-radius;
   }
 
-  &:last-child() {
+  &:last-of-type {
     border-radius: 0 $border-radius $border-radius 0;
     border-right: 1px solid color(border);
+  }
+}
+
+td {
+  border-bottom: 1px solid color(border);
+  color: color(gray2);
+  font-size: font-size(small1);
+  line-height: 1.4rem;
+
+  &:first-of-type {
+    font-weight: font-weight(bold);
+    white-space: nowrap;
   }
 }
 

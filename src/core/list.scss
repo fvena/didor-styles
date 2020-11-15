@@ -15,6 +15,7 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
+  margin-top: quarter();
 }
 
 dt {
@@ -58,5 +59,63 @@ dl {
 
   dd + dt {
     padding-top: 1rem;
+  }
+}
+
+/**
+ * Aplico estilo a los listados numerados
+ */
+ol {
+  counter-reset: b;
+  list-style: none;
+
+  li {
+    margin-bottom: quarter();
+    margin-left: 0;
+    padding-left: simple();
+    position: relative;
+
+    &::before {
+      color: color(gray4);
+      content: counters(b, '.') ' ';
+      counter-increment: b;
+      left: quarter('-');
+      position: absolute;
+      text-align: right;
+      width: simple();
+    }
+
+    img {
+      display: block;
+      margin: simple() auto;
+      max-width: calc(100% - #{simple()});
+    }
+  }
+}
+
+/**
+ * Aplico estilo a los listados no numerados
+ */
+ul {
+  list-style: none;
+
+  li {
+    margin-bottom: quarter();
+    margin-left: 0;
+    padding-left: simple();
+    position: relative;
+
+    &::before {
+      background-color: color(gray4);
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: 6px;
+      left: 14px;
+      position: absolute;
+      text-align: right;
+      top: 11px;
+      width: 6px;
+    }
   }
 }

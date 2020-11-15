@@ -11,11 +11,11 @@ Los diseños se basan en flexbos, asegurate que tu navegador los admita.
 ### Cabecera, Contenido y Footer
 
 ::: demo
-<div class="page-demo">
+<div class="page--layout">
   <az-row dir="column" hgutter="small" vgutter="small">
-    <header><div class="page-demo__block">Header</div></header>
-    <main><div class="page-demo__block page-demo__main">Content</div></main>
-    <footer><div class="page-demo__block">Footer</div></footer>
+    <header><div class="page--layout__block">Header</div></header>
+    <main><div class="page--layout__block page--layout__main">Content</div></main>
+    <footer><div class="page--layout__block">Footer</div></footer>
   </az-row>
 </div>
 :::
@@ -31,14 +31,14 @@ Los diseños se basan en flexbos, asegurate que tu navegador los admita.
 ### Cabecera, Contenido, Menú lateral y Footer (responsive)
 
 ::: demo
-<div class="page-demo">
+<div class="page--layout">
   <az-row dir="column" hgutter="small" vgutter="small">
-    <header><div class="page-demo__block">Header</div></header>
+    <header><div class="page--layout__block">Header</div></header>
     <az-row valign="stretch" :palm="{dir: 'column'}" hgutter="small" vgutter="small" grid>
-      <az-col class="page-demo__aside" auto><div class="page-demo__block">Aside</div></az-col>
-      <az-col expand><div class="page-demo__block page-demo__main">Content</div></az-col>
+      <az-col class="page--layout__aside" auto><div class="page--layout__block">Aside</div></az-col>
+      <az-col expand><div class="page--layout__block page--layout__main">Content</div></az-col>
     </az-row>
-    <footer><div class="page-demo__block">Footer</div></footer>
+    <footer><div class="page--layout__block">Footer</div></footer>
   </az-row>
 </div>
 :::
@@ -65,15 +65,15 @@ Los diseños se basan en flexbos, asegurate que tu navegador los admita.
 ### Cabecera, Contenido, dos contenedores laterales y Footer (responsive)
 
 ::: demo
-<div class="page-demo">
+<div class="page--layout">
   <az-row dir="column" hgutter="small" vgutter="small">
-    <header><div class="page-demo__block">Header</div></header>
+    <header><div class="page--layout__block">Header</div></header>
     <az-row valign="stretch" :palm="{dir: 'column'}" hgutter="small" vgutter="small" grid>
-      <az-col class="page-demo__aside" auto><div class="page-demo__block">Aside Left</div></az-col>
-      <az-col expand><div class="page-demo__block page-demo__main">Content</div></az-col>
-      <az-col class="page-demo__aside" auto><div class="page-demo__block">Aside Right</div></az-col>
+      <az-col class="page--layout__aside" auto><div class="page--layout__block">Aside Left</div></az-col>
+      <az-col expand><div class="page--layout__block page--layout__main">Content</div></az-col>
+      <az-col class="page--layout__aside" auto><div class="page--layout__block">Aside Right</div></az-col>
     </az-row>
-    <footer><div class="page-demo__block">Footer</div></footer>
+    <footer><div class="page--layout__block">Footer</div></footer>
   </az-row>
 </div>
 :::
@@ -101,14 +101,14 @@ Los diseños se basan en flexbos, asegurate que tu navegador los admita.
 ### Cabecera, Contenido, Menú lateral y Footer (responsive) - Diseño 2
 
 ::: demo
-<div class="page-demo">
+<div class="page--layout">
   <az-row valign="stretch" :palm="{dir: 'column'}" hgutter="small" vgutter="small" grid>
-    <az-col class="page-demo__aside" auto><div class="page-demo__block">Aside</div></az-col>
+    <az-col class="page--layout__aside" auto><div class="page--layout__block">Aside</div></az-col>
     <az-col expand>
       <az-row dir="column" :palm="{dir: 'column'}" hgutter="small" vgutter="small">
-        <header><div class="page-demo__block">Header</div></header>
-        <main><div class="page-demo__block page-demo__main">Content</div></main>
-        <footer><div class="page-demo__block">Footer</div></footer>
+        <header><div class="page--layout__block">Header</div></header>
+        <main><div class="page--layout__block page--layout__main">Content</div></main>
+        <footer><div class="page--layout__block">Footer</div></footer>
       </az-row>
     </az-col>
   </az-row>
@@ -138,17 +138,17 @@ Los diseños se basan en flexbos, asegurate que tu navegador los admita.
 ### Cabecera, Contenido, dos contenedores laterales y Footer (responsive) - Diseño 2
 
 ::: demo
-<div class="page-demo">
+<div class="page--layout">
   <az-row valign="stretch" :palm="{dir: 'column'}" hgutter="small" vgutter="small" grid>
-    <az-col class="page-demo__aside" auto><div class="page-demo__block">Aside Left</div></az-col>
+    <az-col class="page--layout__aside" auto><div class="page--layout__block">Aside Left</div></az-col>
     <az-col expand>
       <az-row dir="column" hgutter="small" vgutter="small" >
-        <header><div class="page-demo__block">Header</div></header>
+        <header><div class="page--layout__block">Header</div></header>
         <az-row valign="stretch" :palm="{dir: 'column'}" hgutter="small" vgutter="small" grid>
-          <az-col expand><div class="page-demo__block page-demo__main">Content</div></az-col>
-          <az-col class="page-demo__aside" auto><div class="page-demo__block">Aside Right</div></az-col>
+          <az-col expand><div class="page--layout__block page--layout__main">Content</div></az-col>
+          <az-col class="page--layout__aside" auto><div class="page--layout__block">Aside Right</div></az-col>
         </az-row>
-        <footer><div class="page-demo__block">Footer</div></footer>
+        <footer><div class="page--layout__block">Footer</div></footer>
       </az-row>
     </az-col>
   </az-row>

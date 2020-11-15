@@ -4,16 +4,14 @@
 // Aplica/Elimina un borde predefinido a un elemento
 //
 // Ejemplos:
-//   .border                            // Todos los lados a la vez
-//   .border-{top,right,bottom,left}    // A un solo lado
-//   .no-border                         // Elimina todos los bordes de un elemento
-//   .no-border-{top,right,bottom,left} // Elimina el borde de un solo lado
+//   .border                                // Todos los lados a la vez
+//   .border-{top,right,bottom,left,x,y}    // A un solo lado
+//   .no-border                             // Elimina todos los bordes de un elemento
+//   .no-border-{top,right,bottom,left,x,y} // Elimina el borde de un solo lado
 //
 
 .border {
-  border-color: $border-color;
-  border-style: $border-style;
-  border-width: $border-width;
+  border: $border-width $border-style color(border);
 }
 
 .no-border {
@@ -22,14 +20,32 @@
 
 @each $position in ('top', 'right', 'bottom', 'left') {
   .border-#{$position} {
-    border-#{$position}-width: $border-width;
-    border-#{$position}-style: $border-style;
-    border-#{$position}-color: $border-color;
+    border-#{$position}: $border-width $border-style color(border);
   }
 
   .no-border-#{$position} {
-    border-#{$position}: none !important;
+    border-#{$position}: 0 !important;
   }
+}
+
+.border-x {
+  border-left: $border-width $border-style color(border);
+  border-right: $border-width $border-style color(border);
+}
+
+.border-y {
+  border-bottom: $border-width $border-style color(border);
+  border-top: $border-width $border-style color(border);
+}
+
+.no-border-x {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+.no-border-y {
+  border-bottom: 0 !important;
+  border-top: 0 !important;
 }
 
 //
@@ -40,16 +56,26 @@
 // Ejemplos:
 //   .border.border--brand  // Colorea el borde con el color de la marca
 
-$border-colors: (
-  'brand': $brand,
-  'warning': $warning,
-  'success': $success,
-  'danger': $danger,
-);
-
-@each $name, $color in $border-colors {
+@each $name, $color in $theme {
   .border--#{$name} {
     border-color: $color !important;
+  }
+}
+
+:root,
+[data-theme='light'] {
+  @each $name, $color in $light-theme {
+    .border--#{$name} {
+      border-color: $color !important;
+    }
+  }
+}
+
+[data-theme='dark'] {
+  @each $name, $color in $dark-theme {
+    .border--#{$name} {
+      border-color: $color !important;
+    }
   }
 }
 

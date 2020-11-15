@@ -12,18 +12,24 @@ $prefix: 'dd-';
 //
 // Colores de Marca
 //
-$brand-darker: hsl(190, 90%, 25%) !default;
-$brand-dark: hsl(190, 70%, 35%) !default;
-$brand: hsl(190, 65%, 45%) !default;
-$brand-light: hsl(190, 65%, 65%) !default;
-$brand-lighter: hsl(190, 60%, 85%) !default;
+// $brand-darker: hsl(190, 90%, 25%) !default;
+// $brand-dark: hsl(190, 70%, 35%) !default;
+// $brand: hsl(190, 65%, 45%) !default;
+// $brand-light: hsl(190, 65%, 65%) !default;
+// $brand-lighter: hsl(190, 60%, 85%) !default;
+
+$brand-darker: hsl(338, 100%, 25%);
+$brand-dark: hsl(344, 79%, 41%);
+$brand: hsl(346, 73%, 50%);
+$brand-light: hsl(352, 96%, 65%);
+$brand-lighter: hsl(3, 100%, 74%);
 
 //
 // Colores Neutros
 //
 $color-gray1: hsl(196, 25%, 12%) !default;
 $color-gray2: hsl(198, 17%, 28%) !default;
-$color-gray3: hsl(200, 5%, 46%) !default;
+$color-gray3: hsl(200, 10%, 46%) !default;
 $color-gray4: hsl(198, 7%, 64%) !default;
 $color-gray5: hsl(202, 13%, 83%) !default;
 $color-gray6: hsl(206, 17%, 92%) !default;
@@ -66,6 +72,69 @@ $color-link-hover: color(brand-dark) !default;
 $color-mark: color(content) !default;
 $color-mark-background: color(brand-a20) !default;
 $color-loading: color(brand) !default;
+
+//
+// Grupo Tema
+//
+$theme: (
+  'brand-darker': $brand-darker,
+  'brand-dark': $brand-dark,
+  'brand': $brand,
+  'brand-light': $brand-light,
+  'brand-lighter': $brand-lighter,
+  'warning-darker': $warning-darker,
+  'warning-dark': $warning-dark,
+  'warning': $warning,
+  'warning-light': $warning-light,
+  'warning-lighter': $warning-lighter,
+  'success-darker': $success-darker,
+  'success-dark': $success-dark,
+  'success': $success,
+  'success-light': $success-light,
+  'success-lighter': $success-lighter,
+  'danger-darker': $danger-darker,
+  'danger-dark': $danger-dark,
+  'danger': $danger,
+  'danger-light': $danger-light,
+  'danger-lighter': $danger-lighter,
+  'default-darker': $color-gray2,
+  'default-dark': $color-gray3,
+  'default': $color-gray4,
+  'default-light': $color-gray5,
+  'default-lighter': $color-gray6,
+);
+
+//
+// Grupo Tema claro
+//
+$light-theme: (
+  'gray1': $color-gray1,
+  'gray2': $color-gray2,
+  'gray3': $color-gray3,
+  'gray4': $color-gray4,
+  'gray5': $color-gray5,
+  'gray6': $color-gray6,
+  'gray7': $color-gray7,
+  'gray8': $color-gray8,
+  'white': $color-white,
+  'black': $color-black,
+);
+
+//
+// Grupo Tema oscuro
+//
+$dark-theme: (
+  'gray1': hsl(220, 12%, 99%),
+  'gray2': hsl(220, 10%, 83%),
+  'gray3': hsl(206, 8%, 65%),
+  'gray4': hsl(202, 6%, 46%),
+  'gray5': hsl(198, 8%, 28%),
+  'gray6': hsl(200, 12%, 19%),
+  'gray7': hsl(198, 17%, 14%),
+  'gray8': hsl(196, 25%, 12%),
+  'white': $color-black,
+  'black': $color-white,
+);
 
 :root {
   //
@@ -189,13 +258,14 @@ $size-percentages: (
   '100': 100%,
 ) !default;
 
-//
-// BORDES
-//
+/**
+/* BORDES
+*/
 $border-width: 1px !default;
 $border-style: solid !default;
 $border-color: color(gray6) !default;
 $border-radius: 10px !default;
+$border: $border-width $border-style color(border);
 
 /**
  * BLOCKQUOTE
@@ -206,7 +276,7 @@ $blockquote-border-color: color(brand) !default;
 /**
  * CODE
  */
-$code-color: color(brand-dark) !default;
+$code-color: color(gray7) !default;
 $code-background: color(gray2) !default;
 $inline-code-color: color(brand-dark) !default;
 $inline-code-background: color(gray7) !default;

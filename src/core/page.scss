@@ -21,7 +21,7 @@ html {
   -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes /* [5] */
   -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes /* [5] */
   height: 100%; /* [2] */
-  overflow-y: scroll; /* [3] */
+  // overflow-y: scroll; /* [3] */ // Lo comento porque no funciona el posicionamiento sticky
   scroll-behavior: smooth;
   text-size-adjust: 100%; /* [4] */
 }

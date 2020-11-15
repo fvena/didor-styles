@@ -23,33 +23,34 @@
 
 .blockquote--right {
   text-align: right;
-}
 
-//
-// Añade un borde lateral a una cita, y lo posiciona según la alineación de la cita
-//
-.blockquote--bordered {
-  border-left: 0.15rem solid $blockquote-border-color;
-  padding-left: simple();
-}
-
-.blockquote--bordered.blockquote--right {
-  border-left: 0;
-  border-right: 0.15rem solid $blockquote-border-color;
-  padding-left: 0;
-  padding-right: simple();
   p,
   > footer,
   > .footer {
     padding-left: 30%;
     padding-right: 0;
   }
+}
 
-  &.blockquote--bordered {
-    border-left: 0;
-    border-right: 0.25rem solid $blockquote-border-color;
-    padding-left: 0;
-    padding-right: simple();
+//
+// Añade un borde lateral a una cita, y lo posiciona según la alineación de la cita
+//
+.blockquote--bordered {
+  border-left: 0.25rem solid $blockquote-border-color;
+  padding-left: simple();
+}
+
+.blockquote--bordered.blockquote--right {
+  border-left: 0;
+  border-right: 0.25rem solid $blockquote-border-color;
+  padding-left: 0;
+  padding-right: simple();
+
+  p,
+  > footer,
+  > .footer {
+    padding-left: 30%;
+    padding-right: 0;
   }
 }
 
@@ -61,9 +62,7 @@
     padding-left: half();
   }
 
-  .blockquote--right {
-    &.blockquote--bordered {
-      padding-right: half();
-    }
+  .blockquote--bordered.blockquote--right {
+    padding-right: half();
   }
 }

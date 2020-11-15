@@ -16,17 +16,13 @@
 //   - none, inline, inline-block, block
 //
 // Ejemplos:
-//   .display-none         // Oculta un elemento
-//   .display-palm-none    // Oculta un elemento solo en tamaños de pantalla móviles
+//   .display-palm-inline    // Oculta un elemento solo en tamaños de pantalla móviles
 //
 
 @each $breakpoint in $breakpoints-list {
   @include media($breakpoint) {
     $breakpoint: get-breakpoint-sufix($breakpoint);
 
-    .display#{$breakpoint}-none {
-      display: none !important;
-    }
     .display#{$breakpoint}-inline {
       display: inline !important;
     }
@@ -54,14 +50,8 @@
 //   - none, inline, inline-block, block
 //
 // Ejemplos:
-//   .display-print-none     // Oculta un elemento al imprimir la página
 //   .display-print-block    // Muestra un elemento como bloque al imprimir la página
 //
-.display-print-none {
-  @media print {
-    display: none !important;
-  }
-}
 
 .display-print-inline {
   @media print {

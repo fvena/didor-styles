@@ -20,11 +20,11 @@ $kbd-background: color(gray2);
 
 ## Código en línea
 
-```demo
+::: page--code
 Ejemplo de código en linea con la etiqueta <code>&lt;section&gt;</code>.
-```
+:::
 
-``` html
+```html
 Ejemplo de código en linea con la etiqueta <code>&lt;section&gt;</code>.
 ```
 
@@ -37,29 +37,18 @@ Si quieres representar una etiqueta HTML, recuerda escapar los caracterés espec
 
 ## Código en bloque
 
-```demo
-<template>
-<pre class="width-100">
-  <code>
-    &lt;p&gt;Sample text here...&lt;/p&gt;
-    <br>
-    &lt;p&gt;And another line of sample text here...&lt;/p&gt;
-  </code>
+<pre>
+<code>
+Línea de prueba..
+Otra línea de de prueba...
+</code>
 </pre>
-</template>
-
-<style>
-  pre {
-    margin-bottom: 0;
-  }
-</style>
-```
 
 ``` html
 <pre>
   <code>
-    Sample text here..
-    And another line of sample text here...
+    Línea de prueba..
+    Otra línea de de prueba...
   </code>
 </pre>
 ```
@@ -68,10 +57,10 @@ Si quieres representar una etiqueta HTML, recuerda escapar los caracterés espec
 
 Si queremos indicar que un usuario tiene que introducir algún dato mediante teclado, o es una combinación de teclas, utilizaremos la etiqueta `<kbd>`.
 
-```demo
+::: page--code
 Para entrar en un directorio, escribe <kbd>cd</kbd> seguido del nombre del directorio.<br>
 Para terminar el proceso, presiona <kbd>ctrl + q</kbd>.
-```
+:::
 
 ``` html
 Para entrar en un directorio, escribe <kbd>cd</kbd> seguido del nombre del directorio.<br>

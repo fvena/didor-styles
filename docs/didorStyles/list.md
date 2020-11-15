@@ -4,7 +4,7 @@ Los listados nos permiten enumerar una secuencia de elementos. Didor tiene vario
 
 ## Listas no numeradas
 
-::: demo
+:::page--list
 <ul>
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
@@ -38,7 +38,7 @@ Los listados nos permiten enumerar una secuencia de elementos. Didor tiene vario
 
 ## Listas numeradas
 
-::: demo
+:::page--list
 <ol>
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
@@ -74,7 +74,7 @@ Los listados nos permiten enumerar una secuencia de elementos. Didor tiene vario
 
 Elimina el estilo por defecto del primer nivel de la lista en la que aplica la clase.
 
-::: demo
+::: page--list
 <ul class="list--unstyled">
   <li>Lorem ipsum dolor sit amet</li>
   <li>Consectetur adipiscing elit</li>
@@ -108,7 +108,7 @@ Elimina el estilo por defecto del primer nivel de la lista en la que aplica la c
 
 ## Lista en una línea
 
-::: demo
+::: page--list
 <ul class="list--inline">
   <li>Lorem ipsum</li>
   <li>Phasellus iaculis</li>

@@ -3,7 +3,7 @@
 //
 // Modifica como se posiciona un elemento.
 //
-@each $position in ('static', 'relative', 'absolute', 'fixed', 'sticky') {
+@each $position in ('static', 'relative', 'absolute') {
   .position-#{$position} {
     position: $position !important;
   }
@@ -39,6 +39,14 @@
   @supports (position: sticky) {
     position: sticky;
     top: 0;
+    z-index: $z-index-sticky;
+  }
+}
+
+.sticky-bottom {
+  @supports (position: sticky) {
+    bottom: 0;
+    position: sticky;
     z-index: $z-index-sticky;
   }
 }

@@ -1,8 +1,8 @@
 // Striped Table
 //
 .table--striped {
-  > tr:nth-of-type(odd),
-  tbody > tr:nth-of-type(odd) {
+  > tr:nth-of-type(even),
+  tbody > tr:nth-of-type(even) {
     /* stylelint-disable-next-line */
     th,
     td {
@@ -34,6 +34,59 @@
   }
 }
 
+// responsive Table
+//
+@each $breakpoint in $breakpoints-list {
+  @include media($breakpoint) {
+    $breakpoint: get-breakpoint-sufix($breakpoint);
+
+    .table#{$breakpoint}--responsive {
+      thead {
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      tr {
+        border-bottom: 3px solid color(border);
+        display: block;
+        margin-bottom: half();
+      }
+
+      td {
+        border-bottom: 1px solid color(border);
+        display: block;
+        text-align: right;
+
+        &:first-of-type {
+          background-color: color(gray7);
+          border: 1px solid color(border);
+          border-radius: $border-radius;
+        }
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+      }
+
+      td::before {
+        color: color(gray2);
+        content: attr(data-label);
+        float: left;
+        font-size: font-size(small2);
+        font-weight: font-weight(bold);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+//
+// Tabla scrollable
 .table-wrapper {
   display: block;
   -webkit-overflow-scrolling: touch;

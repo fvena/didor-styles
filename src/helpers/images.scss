@@ -2,8 +2,7 @@
   width: 100%;
 }
 
-.image--frame,
-.image--polaroid {
+.image--frame {
   background-color: #ffffff;
   border: 1px solid color(border);
   border-radius: $border-radius;
@@ -12,6 +11,9 @@
   transition: all 0.2s ease-in-out;
 }
 
-.image--polaroid {
-  padding-bottom: double();
+.image--shadow {
+  @include shadow(3);
+
+  border: 1px solid color(gray6);
+  border-radius: $border-radius;
 }

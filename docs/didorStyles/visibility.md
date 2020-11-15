@@ -184,12 +184,32 @@ debes ocultar el elemento con la clase `.hidden` y luego indicar con la clase
   </div>
 </div>
 
+## Tipo de visualización
+
+Permite indicar como se visualizará un elemento:
+
+* `.display-{breakpoint}-inline` elemento en línea.
+* `.display-{breakpoint}-inline-block` bloque en línea.
+* `.display-{breakpoint}-block` bloque.
+
+
+```html
+<div class="display-inline-block display-palm-block">
+  Se comportará como un bloque en línea menos en dispositivos móviles que se comporatará como un bloque
+</div>
+```
+
+
+
 ## Impresión
 
 Podemos mostrar/ocultar elementos especificamente para la impresión:
 
 * `.hidden-print` oculta un elemento cuando se imprime la página.
 * `.visible-print` el elemento solo será visible cuando se imprima la página.
+* `.display-print-inline` elemento en línea.
+* `.display-print-inline-block` bloque en línea.
+* `.display-print-block` bloque.
 
 ```html
 <div class="hidden-print">No será visible en impresión</div>

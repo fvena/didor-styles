@@ -35,3 +35,29 @@ img[width],
 img[height] {
   max-width: none; /* [1, 2] */
 }
+
+/**
+ * Pies de foto
+ *
+ * 1. Los mapas de Google se rompen si `max-width: 100%`; usamos su propio
+ *    selector para evitar este problema.
+ * 2. Si se define de forma explicita la altura o anchura de una imagen, tenemos
+ *    que evitar que se adapte para que no se deforme.
+ */
+figure {
+  margin: double() 0 triple();
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  figcaption {
+    color: color(gray3);
+    font-size: font-size(small1);
+    font-style: italic;
+    margin-top: quarter();
+    text-align: center;
+  }
+}

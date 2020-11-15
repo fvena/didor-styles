@@ -7,16 +7,11 @@ Normalmente, no querremos que nuestro contenido se salga de su elemento padre, p
 * `.overflow-auto` si es necesario, se podrá hacer scroll
 * `.overflow-hidden` el contenido que no cabe se oculta
 
-``` html
-<div class="overflow-auto">Lorem ipsum...</div>
-<div class="overflow-hidden">Lorem ipsum...</div>
-```
-
-::: demo
-<div class="page--overflow padding-bottom-triple">
+::: page--overflow
+<div class="page--overflow padding-bottom-quintuple">
   <div class="page-block">
   <strong>Defecto</strong><br>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod elementum enim, ac aliquet sem consectetur non. Integer suscipit lacus eu turpis sagittis, sit amet venenatis leo dignissim.  Suspendisse facilisis urna dolor, sit amet lacinia dui mollis id. </div>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod elementum enim, ac aliquet sem consectetur non. Integer suscipit lacus eu turpis sagittis, sit amet venenatis leo dignissim. </div>
   <div class="overflow-auto page-block">
   <strong>overflow-auto</strong><br>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod elementum enim, ac aliquet sem consectetur non. Integer suscipit lacus eu turpis sagittis, sit amet venenatis leo dignissim.  Suspendisse facilisis urna dolor, sit amet lacinia dui mollis id. </div>
@@ -25,3 +20,8 @@ Normalmente, no querremos que nuestro contenido se salga de su elemento padre, p
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod elementum enim, ac aliquet sem consectetur non. Integer suscipit lacus eu turpis sagittis, sit amet venenatis leo dignissim.  Suspendisse facilisis urna dolor, sit amet lacinia dui mollis id. </div>
 </div>
 :::
+
+``` html
+<div class="overflow-auto">Lorem ipsum...</div>
+<div class="overflow-hidden">Lorem ipsum...</div>
+```

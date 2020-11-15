@@ -9,3 +9,29 @@
 @function color($color) {
   @return var(--color-#{$color});
 }
+
+//
+// Mixin
+//
+// Devuele el gradiente en formato variable css seleccionado
+//
+// .elemento { background-color: gradient(brand); }
+//
+
+@function gradient($color1, $color2) {
+  @if type-of($color1) != color {
+    $color1: color($color1);
+  }
+
+  @if type-of($color2) != color {
+    $color2: color($color2);
+  }
+
+  @return radial-gradient(ellipse at left top, $color1 0%, $color2 100%);
+}
+
+@mixin theme($theme) {
+  [data-theme='#{$theme}'] {
+    @content;
+  }
+}
