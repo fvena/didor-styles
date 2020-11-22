@@ -2,111 +2,10 @@
 
 Modifica el tamaño de un elemento cuando lo necesites en altura y anchura.
 
-Todas las dimensiones del framework se toman proporcionales a una cuadrícula del tamaño de la altura de línea. Esta es una técnica utilizada en diseño editorial, y garantiza que todos los espacios entre elementos así como sus dimensiones mantengan una proporcionalidad.
+## Configuración
 
-A la hora de dar un tamaño a un elemento podemos dar un valor proporcional a la retícula base, o podemos dar un valor porcentual respecto de su contenedor.
-
-## Valores Proporcional
-
-Los valores proporcionales por defecto, respecto del tamaño base definido por la altura de línea son `1/4`, `1/2`, `1`, `2`, `3`, `4`, `5` y `6`.
-
-::: demo
-<div class="page-size">
-  <div><div class="page-block width-quarter"></div>quarter() => 1/4x</div>
-  <div><div class="page-block width-half"></div>half() => 1/2x</div>
-  <div><div class="page-block width"></div>simple() => x</div>
-  <div><div class="page-block width-double"></div>double() => 2x</div>
-  <div><div class="page-block width-triple"></div>triple() => 3x</div>
-  <div><div class="page-block width-quadruple"></div>quadruple() => 4x</div>
-  <div><div class="page-block width-quintuple"></div>quintuple() => 5x</div>
-  <div><div class="page-block width-sextuple"></div>sextuple() => 6x</div>
-</div>
-:::
-
-``` html
-<div class="width-quarter">...</div>
-<div class="width-half">...</div>
-<div class="width">...</div>
-<div class="width-double">...</div>
-<div class="width-triple">...</div>
-<div class="width-cuadrupe">...</div>
-<div class="width-quintuple">...</div>
-<div class="width-sextuple">...</div>
-```
-
-``` html
-<div class="height-quarter">...</div>
-<div class="height-half">...</div>
-<div class="height">...</div>
-<div class="height-double">...</div>
-<div class="height-triple">...</div>
-<div class="height-cuadrupe">...</div>
-<div class="height-quintuple">...</div>
-<div class="height-sextuple">...</div>
-```
-
-
-
-## Valores Porcentuales
-
-Los valores por defecto para la anchura y altura de un elemento son `25%`, `50%`, `75%`, `100%` y `auto`.
-
-También puedes indicar que su tamaño máximo máximo sea el 100%, o que su tamaño sea relativo al viewport en vez de a su contenedor.
-
-### Anchura
-
-La anchura será relativa a su elemento padre.
-
-::: demo
-<div class="page-size-width">
-  <div class="page-block width-25">Anchura 25%</div>
-  <div class="page-block width-50">Anchura 50%</div>
-  <div class="page-block width-75">Anchura 75%</div>
-  <div class="page-block width-100">Anchura 100%</div>
-  <div class="page-block width-auto">Anchura auto</div>
-  <div class="page-block max-width-100">Anchura máxima 100%</div>
-  <div class="page-block vw-100">Anchura 100% del viewport</div>
-  <div class="page-block max-vw-100">Anchura máxima 100% del viewport</div>
-</div>
-:::
-
-``` html
-<div class="width-25">...</div>
-<div class="width-50">...</div>
-<div class="width-75">...</div>
-<div class="width-100">...</div>
-<div class="width-auto">...</div>
-<div class="max-width-100">...</div>
-<div class="vw-100">...</div>
-<div class="max-vw-100">...</div>
-```
-
-### Altura
-
-La altura será relativa a su elemento padre.
-
-::: demo
-<div class="page-size-height">
-  <div class="page-block height-25">Altura 25%</div>
-  <div class="page-block height-50">Altura 50%</div>
-  <div class="page-block height-75">Altura 75%</div>
-  <div class="page-block height-100">Altura 100%</div>
-  <div class="page-block height-auto">Altura auto</div>
-  <div class="page-block max-height-100">Altura máxima 100%</div>
-  <div class="page-block vh-100">Altura 100% del viewport</div>
-  <div class="page-block max-vh-100">Altura máxima 100% del viewport</div>
-</div>
-:::
-
-``` html
-<div class="height-25">...</div>
-<div class="height-50">...</div>
-<div class="height-75">...</div>
-<div class="height-100">...</div>
-<div class="height-auto">...</div>
-<div class="max-height-100">...</div>
-<div class="vh-100">...</div>
-<div class="max-vh-100">...</div>
+```scss
+$space: $line-height * 1rem !default;
 ```
 
 ## Funciones
@@ -114,6 +13,17 @@ La altura será relativa a su elemento padre.
 Podemos definir un tamaño o espaciado en nuestros archivos `sass` mediante la función `size(...)`. Esta función nos devolverá el valor indicado multiplicado por nuestro tamaño base.
 
 Admite cualquier valor númerico, incluidos números negativos.
+
+::: page--size
+  <div><div class="page-block display-inline-block no-padding width-quarter"></div>quarter() => 1/4x</div>
+  <div><div class="page-block display-inline-block no-padding width-half"></div>half() => 1/2x</div>
+  <div><div class="page-block display-inline-block no-padding width"></div>simple() => x</div>
+  <div><div class="page-block display-inline-block no-padding width-double"></div>double() => 2x</div>
+  <div><div class="page-block display-inline-block no-padding width-triple"></div>triple() => 3x</div>
+  <div><div class="page-block display-inline-block no-padding width-quadruple"></div>quadruple() => 4x</div>
+  <div><div class="page-block display-inline-block no-padding width-quintuple"></div>quintuple() => 5x</div>
+  <div><div class="page-block display-inline-block no-padding width-sextuple"></div>sextuple() => 6x</div>
+:::
 
 ``` scss
 .elemento1 {
@@ -156,4 +66,119 @@ width: sextuple();   // 6 * $space
 .elemento3 {
   margin-top: double('-');
 }
+```
+
+## Valores Relativos
+
+Por defecto, todas las dimensiones del framework se toman relativas a una cuadrícula del tamaño de la altura de línea.
+
+Es una técnica utilizada en diseño editorial, y garantiza que todos los espacios entre elementos así como sus dimensiones mantengan una proporcionalidad.
+
+::: page--size
+<div>
+  <div class="page-block display-inline-block no-padding width-quarter"></div>quarter
+  <span class="small1-normal-gray">(1/4x)</span>
+</div>
+<div>
+  <div class="page-block display-inline-block no-padding width-half"></div>half
+  <span class="small1-normal-gray">(1/2x)</span>
+</div>
+<div>
+  <div class="page-block display-inline-block no-padding width"></div>width
+  <span class="small1-normal-gray">(x)</span>
+</div>
+<div>
+  <div class="page-block display-inline-block no-padding width-double"></div>double
+  <span class="small1-normal-gray">(2x)</span>
+</div>
+<div>
+  <div class="page-block display-inline-block no-padding width-triple"></div>triple
+  <span class="small1-normal-gray">(3x)</span>
+</div>
+<div>
+  <div class="page-block display-inline-block no-padding width-quadruple"></div>quadruple
+  <span class="small1-normal-gray">(4x)</span>
+</div>
+<div>
+  <div class="page-block display-inline-block no-padding width-quintuple"></div>quintuple
+  <span class="small1-normal-gray">(5x)</span>
+</div>
+<div>
+  <div class="page-block display-inline-block no-padding width-sextuple"></div>sextuple
+  <span class="small1-normal-gray">(6x)</span>
+</div>
+:::
+
+## Valores Porcentuales
+
+También existen tamaños predefinidos proporcionales al elemento padre o a la ventana del navegador
+### Decenas
+
+::: page--size
+  <div class="page-block width-10">10%</div>
+  <div class="page-block width-20">20%</div>
+  <div class="page-block width-30">30%</div>
+  <div class="page-block width-40">40%</div>
+  <div class="page-block width-50">50%</div>
+  <div class="page-block width-60">60%</div>
+  <div class="page-block width-70">70%</div>
+  <div class="page-block width-80">80%</div>
+  <div class="page-block width-90">90%</div>
+  <div class="page-block width-100">100%</div>
+:::
+
+### Cuartos
+
+::: page--size
+  <div class="page-block width-25">25%</div>
+  <div class="page-block width-50">50%</div>
+  <div class="page-block width-75">75%</div>
+  <div class="page-block width-100">100%</div>
+:::
+
+### Tercios
+
+::: page--size
+  <div class="page-block width-33">33%</div>
+  <div class="page-block width-66">66%</div>
+  <div class="page-block width-100">100%</div>
+:::
+
+## Altura y Anchura
+
+Por defecto, Didor tiene definido varias clases para modificar el tamaño de un elemento. En el caso de valores porcentuales, se pueden aplicar respecto al elemento padre o respecto a la ventana del navegador:
+
+``` html
+<!-- RELATIVOS -->
+<!-- quarter -->
+<!-- half -->
+<!-- simple -->
+<!-- double -->
+<!-- triple -->
+<!-- quadruple -->
+<!-- quintuple -->
+<!-- sextuple -->
+<div class="width-half">...</div>
+<div class="width">...</div>
+<div class="height-double">...</div>
+
+<!-- PROPORCIONALES AL ELEMENTO PADRE -->
+<!-- 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 -->
+<!-- 25, 50, 75 -->
+<!-- 33, 66 -->
+<div class="width-20">...</div>
+<div class="width-50">...</div>
+<div class="height-75">...</div>
+
+<!-- PROPORCIONALES AL NAVEGADOR -->
+<!-- 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 -->
+<!-- 25, 50, 75 -->
+<!-- 33, 66 -->
+<div class="vw-20">...</div>
+<div class="vw-50">...</div>
+<div class="vh-75">...</div>
+
+<!-- AUTO -->
+<div class="width-auto">...</div>
+<div class="height-auto">...</div>
 ```

@@ -2,6 +2,12 @@
 
 Los listados nos permiten enumerar una secuencia de elementos. Didor tiene varios tipos para ajustarse a tus necesidades.
 
+## Configuración
+
+```scss
+$list-markers-color: color(gray4);
+```
+
 ## Listas no numeradas
 
 :::page--list

@@ -27,25 +27,40 @@ Puedes indicar como debe flotar un elemento para los diferentes tamaños de pant
 * `.float-{palm|lap|small|desk|large}-right`
 * `.float-{palm|lap|small|desk|large}-none`
 
-:::page--float
+:::page--float--responsive
 <div class="clearfix">
-  <div class="page-block float-palm-right">Flotando a la derecha en móviles</div>
+  <div class="page-block-responsive float-palm-right">
+    <dd-icon name="smartphone" scale="0.8"></dd-icon>
+    Flotando a la derecha en móviles
+  </div>
 </div>
 
 <div class="clearfix">
-  <div class="page-block float-lap-right">Flotando a la derecha en tablet verticales</div>
+  <div class="page-block-responsive float-lap-right">
+    <dd-icon name="tablet" scale="0.8"></dd-icon>
+    Flotando a la derecha en tablet verticales
+  </div>
 </div>
 
 <div class="clearfix">
-  <div class="page-block float-small-right">Flotando a la derecha en tablet horizontales</div>
+  <div class="page-block-responsive float-small-right">
+    <dd-icon name="small" scale="0.8"></dd-icon>
+    Flotando a la derecha en tablet horizontales
+  </div>
 </div>
 
 <div class="clearfix">
-  <div class="page-block float-desk-right">Flotando a la derecha en pantallas</div>
+  <div class="page-block-responsive float-desk-right">
+    <dd-icon name="desktop" scale="0.8"></dd-icon>
+    Flotando a la derecha en pantallas
+  </div>
 </div>
 
 <div class="clearfix">
-  <div class="page-block float-large-right">Flotando a la derecha en pantallas grandes</div>
+  <div class="page-block-responsive float-large-right">
+    <dd-icon name="monitor" scale="0.8"></dd-icon>
+    Flotando a la derecha en pantallas grandes
+  </div>
 </div>
 :::
 

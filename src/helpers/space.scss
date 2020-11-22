@@ -42,7 +42,7 @@
     $breakpoint: get-breakpoint-sufix($breakpoint);
 
     @each $property in ('margin', 'padding') {
-      @each $size, $length in $spacing-map {
+      @each $size, $length in $size-relative {
         // Cuando no hay espaciado, se añade el prefijo indicando que no hay espaciado
         $none: '';
 

@@ -1,5 +1,15 @@
 # Tablas
 
+## Configuración
+
+```scss
+$table-border-color: color(border);
+$table-header-color: color(gray2);
+$table-header-background: color(gray7);
+$table-striped-background: color(gray7);
+$table-hover-background: color(gray6);
+```
+
 ## Tabla básica
 
 Didor aplica el siguiente diseño por defecto a todas las tablas:

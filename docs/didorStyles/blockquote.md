@@ -14,7 +14,10 @@ Para citar un contenido, envuélvelo con la etiqueta `<blockquote>`.
 
 ## Alineación
 
-Puedes modificar la alineación del contenido mediante las clases: `blockquote--left`, `blockquote--center` o `blockquote--right`.
+Puedes modificar la alineación del contenido mediante las clases:
+  - `blockquote--left` <span class="small1-normal-gray">defecto</span>
+  - `blockquote--center`
+  - `blockquote--right`
 
 <blockquote class="blockquote">
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>

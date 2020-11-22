@@ -18,29 +18,29 @@ th {
 }
 
 th {
-  background-color: color(gray7);
-  border-bottom-color: color(border);
-  border-top: 1px solid color(border);
-  color: color(gray2);
+  background-color: $table-header-background;
+  border-bottom-color: $table-border-color;
+  border-top: 1px solid $table-border-color;
+  color: $table-header-color;
   font-size: font-size(small2);
   font-weight: font-weight(bold);
   text-transform: uppercase;
   vertical-align: bottom;
 
   &:first-of-type {
-    border-left: 1px solid color(border);
+    border-left: 1px solid $table-border-color;
     border-radius: $border-radius 0 0 $border-radius;
   }
 
   &:last-of-type {
     border-radius: 0 $border-radius $border-radius 0;
-    border-right: 1px solid color(border);
+    border-right: 1px solid $table-border-color;
   }
 }
 
 td {
-  border-bottom: 1px solid color(border);
-  color: color(gray2);
+  border-bottom: 1px solid $table-border-color;
+  color: $table-header-color;
   font-size: font-size(small1);
   line-height: 1.4rem;
 
@@ -57,5 +57,5 @@ tbody + tbody {
 th,
 td,
 tbody + tbody {
-  border-bottom-color: color(border);
+  border-bottom-color: $table-border-color;
 }

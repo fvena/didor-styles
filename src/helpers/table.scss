@@ -6,7 +6,7 @@
     /* stylelint-disable-next-line */
     th,
     td {
-      background-color: color(gray7);
+      background-color: $table-striped-background;
     }
   }
 }
@@ -27,7 +27,7 @@
       /* stylelint-disable-next-line */
       th,
       td {
-        background-color: color(gray6);
+        background-color: $table-hover-background;
         cursor: pointer;
       }
     }
@@ -52,19 +52,19 @@
       }
 
       tr {
-        border-bottom: 3px solid color(border);
+        border-bottom: 3px solid $table-border-color;
         display: block;
         margin-bottom: half();
       }
 
       td {
-        border-bottom: 1px solid color(border);
+        border-bottom: 1px solid $table-border-color;
         display: block;
         text-align: right;
 
         &:first-of-type {
-          background-color: color(gray7);
-          border: 1px solid color(border);
+          background-color: $table-header-background;
+          border: 1px solid $table-border-color;
           border-radius: $border-radius;
         }
 
@@ -74,7 +74,7 @@
       }
 
       td::before {
-        color: color(gray2);
+        color: $table-header-color;
         content: attr(data-label);
         float: left;
         font-size: font-size(small2);

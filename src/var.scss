@@ -12,12 +12,6 @@ $prefix: 'dd-';
 //
 // Colores de Marca
 //
-// $brand-darker: hsl(190, 90%, 25%) !default;
-// $brand-dark: hsl(190, 70%, 35%) !default;
-// $brand: hsl(190, 65%, 45%) !default;
-// $brand-light: hsl(190, 65%, 65%) !default;
-// $brand-lighter: hsl(190, 60%, 85%) !default;
-
 $brand-darker: hsl(338, 100%, 25%);
 $brand-dark: hsl(344, 79%, 41%);
 $brand: hsl(346, 73%, 50%);
@@ -25,17 +19,32 @@ $brand-light: hsl(352, 96%, 65%);
 $brand-lighter: hsl(3, 100%, 74%);
 
 //
-// Colores Neutros
+// Colores Neutros Light
 //
-$color-gray1: hsl(196, 25%, 12%) !default;
-$color-gray2: hsl(198, 17%, 28%) !default;
-$color-gray3: hsl(200, 10%, 46%) !default;
-$color-gray4: hsl(198, 7%, 64%) !default;
-$color-gray5: hsl(202, 13%, 83%) !default;
-$color-gray6: hsl(206, 17%, 92%) !default;
-$color-gray7: hsl(220, 18%, 97%) !default;
-$color-gray8: hsl(220, 20%, 99%) !default;
+$color-gray1-light: hsl(196, 25%, 12%) !default;
+$color-gray2-light: hsl(198, 17%, 28%) !default;
+$color-gray3-light: hsl(200, 10%, 46%) !default;
+$color-gray4-light: hsl(198, 7%, 64%) !default;
+$color-gray5-light: hsl(202, 13%, 83%) !default;
+$color-gray6-light: hsl(206, 17%, 92%) !default;
+$color-gray7-light: hsl(220, 18%, 97%) !default;
+$color-gray8-light: hsl(220, 20%, 99%) !default;
 
+//
+// Colores Neutros Dark
+//
+$color-gray1-dark: hsl(220, 12%, 99%) !default;
+$color-gray2-dark: hsl(220, 10%, 83%) !default;
+$color-gray3-dark: hsl(206, 8%, 65%) !default;
+$color-gray4-dark: hsl(202, 6%, 46%) !default;
+$color-gray5-dark: hsl(198, 8%, 28%) !default;
+$color-gray6-dark: hsl(200, 12%, 19%) !default;
+$color-gray7-dark: hsl(198, 17%, 14%) !default;
+$color-gray8-dark: hsl(196, 25%, 12%) !default;
+
+//
+// Blanco y Negro
+//
 $color-black: hsl(0, 0%, 0%) !default;
 $color-white: hsl(0, 0%, 100%) !default;
 
@@ -74,67 +83,15 @@ $color-mark-background: color(brand-a20) !default;
 $color-loading: color(brand) !default;
 
 //
-// Grupo Tema
+// Gradientes
 //
-$theme: (
-  'brand-darker': $brand-darker,
-  'brand-dark': $brand-dark,
-  'brand': $brand,
-  'brand-light': $brand-light,
-  'brand-lighter': $brand-lighter,
-  'warning-darker': $warning-darker,
-  'warning-dark': $warning-dark,
-  'warning': $warning,
-  'warning-light': $warning-light,
-  'warning-lighter': $warning-lighter,
-  'success-darker': $success-darker,
-  'success-dark': $success-dark,
-  'success': $success,
-  'success-light': $success-light,
-  'success-lighter': $success-lighter,
-  'danger-darker': $danger-darker,
-  'danger-dark': $danger-dark,
-  'danger': $danger,
-  'danger-light': $danger-light,
-  'danger-lighter': $danger-lighter,
-  'default-darker': $color-gray2,
-  'default-dark': $color-gray3,
-  'default': $color-gray4,
-  'default-light': $color-gray5,
-  'default-lighter': $color-gray6,
-);
+$brand-gradient: 'brand-light', 'brand-dark';
+$warning-gradient: 'warning-light', 'warning-dark';
+$success-gradient: 'success-light', 'success-dark';
+$danger-gradient: 'danger-light', 'danger-dark';
 
-//
-// Grupo Tema claro
-//
-$light-theme: (
-  'gray1': $color-gray1,
-  'gray2': $color-gray2,
-  'gray3': $color-gray3,
-  'gray4': $color-gray4,
-  'gray5': $color-gray5,
-  'gray6': $color-gray6,
-  'gray7': $color-gray7,
-  'gray8': $color-gray8,
-  'white': $color-white,
-  'black': $color-black,
-);
-
-//
-// Grupo Tema oscuro
-//
-$dark-theme: (
-  'gray1': hsl(220, 12%, 99%),
-  'gray2': hsl(220, 10%, 83%),
-  'gray3': hsl(206, 8%, 65%),
-  'gray4': hsl(202, 6%, 46%),
-  'gray5': hsl(198, 8%, 28%),
-  'gray6': hsl(200, 12%, 19%),
-  'gray7': hsl(198, 17%, 14%),
-  'gray8': hsl(196, 25%, 12%),
-  'white': $color-black,
-  'black': $color-white,
-);
+$light-gradient: 'gray7', 'gray5';
+$dark-gradient: 'gray4', 'gray2';
 
 :root {
   //
@@ -202,6 +159,18 @@ $text-muted: color(gray2) !default;
 $link-decoration: none !default;
 $link-decoration-hover: underline !default;
 
+// List
+//
+$list-markers-color: color(gray4) !default;
+
+// Tablas
+//
+$table-border-color: color(border);
+$table-header-color: color(gray2);
+$table-header-background: color(gray7);
+$table-striped-background: color(gray7);
+$table-hover-background: color(gray6);
+
 /**
  * Estilos de texto
  */
@@ -217,8 +186,8 @@ $styles-sizes: (
 ) !default;
 
 $styles-weights: (
-  'regular': var(--font-weight-normal),
-  'medium': var(--font-weight-bold),
+  'normal': var(--font-weight-normal),
+  'bold': var(--font-weight-bold),
 ) !default;
 
 $styles-colors: (
@@ -238,25 +207,6 @@ $container-width-desk: 670px !default;
 $container-width-large: 670px !default;
 
 $space: $line-height * 1rem !default;
-
-$spacing-map: (
-  'none': 0,
-  'quarter': $space / 4,
-  'half': $space / 2,
-  'simple': $space,
-  'double': $space * 2,
-  'triple': $space * 3,
-  'quadruple': $space * 4,
-  'quintuple': $space * 5,
-  'sextuple': $space * 6,
-) !default;
-
-$size-percentages: (
-  '25': 25%,
-  '50': 50%,
-  '75': 75%,
-  '100': 100%,
-) !default;
 
 /**
 /* BORDES

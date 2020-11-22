@@ -1,4 +1,67 @@
 //
+// Grupo Tema
+//
+$theme: (
+  'brand-darker': $brand-darker,
+  'brand-dark': $brand-dark,
+  'brand': $brand,
+  'brand-light': $brand-light,
+  'brand-lighter': $brand-lighter,
+  'warning-darker': $warning-darker,
+  'warning-dark': $warning-dark,
+  'warning': $warning,
+  'warning-light': $warning-light,
+  'warning-lighter': $warning-lighter,
+  'success-darker': $success-darker,
+  'success-dark': $success-dark,
+  'success': $success,
+  'success-light': $success-light,
+  'success-lighter': $success-lighter,
+  'danger-darker': $danger-darker,
+  'danger-dark': $danger-dark,
+  'danger': $danger,
+  'danger-light': $danger-light,
+  'danger-lighter': $danger-lighter,
+  'default-darker': color(gray2),
+  'default-dark': color(gray3),
+  'default': color(gray4),
+  'default-light': color(gray5),
+  'default-lighter': color(gray6),
+);
+
+//
+// Grupo Tema claro
+//
+$light-theme: (
+  'gray1': $color-gray1-light,
+  'gray2': $color-gray2-light,
+  'gray3': $color-gray3-light,
+  'gray4': $color-gray4-light,
+  'gray5': $color-gray5-light,
+  'gray6': $color-gray6-light,
+  'gray7': $color-gray7-light,
+  'gray8': $color-gray8-light,
+  'white': $color-white,
+  'black': $color-black,
+);
+
+//
+// Grupo Tema oscuro
+//
+$dark-theme: (
+  'gray1': $color-gray1-dark,
+  'gray2': $color-gray2-dark,
+  'gray3': $color-gray3-dark,
+  'gray4': $color-gray4-dark,
+  'gray5': $color-gray5-dark,
+  'gray6': $color-gray6-dark,
+  'gray7': $color-gray7-dark,
+  'gray8': $color-gray8-dark,
+  'white': $color-black,
+  'black': $color-white,
+);
+
+//
 // Genera un listado de variables css con la paleta de colores
 //
 
@@ -60,13 +123,13 @@
 
 @each $name, $color in $theme {
   .background-#{$name} {
-    background-color: $color !important;
+    background-color: color($name) !important;
   }
 }
 
 @each $name, $color in $light-theme {
   .background-#{$name} {
-    background-color: $color !important;
+    background-color: color($name) !important;
   }
 }
 
@@ -79,27 +142,38 @@
 //
 
 .gradient-brand {
-  background: gradient(brand-light, brand-dark);
-}
-
-.gradient-light {
-  background: gradient(gray2, gray4);
-}
-
-.gradient-dark {
-  background: gradient(gray5, gray7);
+  background: gradient(#{nth($brand-gradient, 1)}, #{nth($brand-gradient, 2)});
 }
 
 .gradient-warning {
-  background: gradient(warning-light, warning-dark);
+  background: gradient(#{nth($warning-gradient, 1)}, #{nth($warning-gradient, 2)});
 }
 
 .gradient-danger {
-  background: gradient(danger-light, danger-dark);
+  background: gradient(#{nth($success-gradient, 1)}, #{nth($success-gradient, 2)});
 }
 
 .gradient-success {
-  background: gradient(success-light, success-dark);
+  background: gradient(#{nth($danger-gradient, 1)}, #{nth($danger-gradient, 2)});
+}
+
+.gradient-light {
+  background: gradient(#{nth($light-gradient, 1)}, #{nth($light-gradient, 2)});
+}
+
+.gradient-dark {
+  background: gradient(#{nth($dark-gradient, 1)}, #{nth($dark-gradient, 2)});
+}
+
+.dark-mode,
+[data-theme='dark'] {
+  .gradient-light {
+    background: gradient(#{nth($light-gradient, 2)}, #{nth($light-gradient, 1)});
+  }
+
+  .gradient-dark {
+    background: gradient(#{nth($dark-gradient, 2)}, #{nth($dark-gradient, 1)});
+  }
 }
 
 //

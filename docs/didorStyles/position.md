@@ -1,5 +1,7 @@
 # Posicionamiento
 
+## Posicionar elementos
+
 Posicione rapidamente los elementos de su diseño.
 
 Las clases con las posiciones más comunes son:
@@ -69,4 +71,47 @@ Posiciona un elemento de forma fija en la parte inferior de la pantalla.
 
 ```html
 <div class="fixed-bottom">...</div>
+```
+
+## Responsive
+
+Puedes indicar como debe posicionarse un elemento según el tamaño de la pantalla:
+
+* `.position-{palm|lap|small|desk|large}-static`
+* `.position-{palm|lap|small|desk|large}-relative`
+* `.position-{palm|lap|small|desk|large}-absolute`
+* `.fixed-{palm|lap|small|desk|large}-top`
+* `.fixed-{palm|lap|small|desk|large}-bottom`
+* `.sticky-{palm|lap|small|desk|large}-top`
+* `.sticky-{palm|lap|small|desk|large}-bottom`
+
+:::page--position
+  <div class="page-block-responsive fixed-palm-bottom">
+    <dd-icon name="smartphone" scale="0.8"></dd-icon>
+    Posicionamiento fijo en móviles
+  </div>
+  <div class="page-block-responsive fixed-lap-bottom">
+    <dd-icon name="tablet" scale="0.8"></dd-icon>
+    Posicionamiento fijo en tablet verticales
+  </div>
+  <div class="page-block-responsive fixed-small-bottom">
+    <dd-icon name="small" scale="0.8"></dd-icon>
+    Posicionamiento fijo en tablet horizontales
+  </div>
+  <div class="page-block-responsive fixed-desk-bottom">
+    <dd-icon name="desktop" scale="0.8"></dd-icon>
+    Posicionamiento fijo en pantallas
+  </div>
+  <div class="page-block-responsive fixed-large-bottom">
+    <dd-icon name="monitor" scale="0.8"></dd-icon>
+    Posicionamiento fijo en pantallas grandes
+  </div>
+:::
+
+```html
+<div class="fixed-palm-bottom">Posicionamiento fijo en móviles</div>
+<div class="fixed-lap-bottom">Posicionamiento fijo en tablet verticales</div>
+<div class="fixed-small-bottom">Posicionamiento fijo en tablet horizontales</div>
+<div class="fixed-desk-bottom">Posicionamiento fijo en pantallas</div>
+<div class="fixed-large-bottom">Posicionamiento fijo en pantallas grandes</div>
 ```

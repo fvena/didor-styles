@@ -19,11 +19,11 @@ debes ocultar el elemento con la clase `.hidden` y luego indicar con la clase
   <table class='responsive__table'>
     <tr>
       <th>&nbsp;</th>
-      <th><az-icon name="palm" scale="1.1"></az-icon> Palm</th>
-      <th><az-icon name="lap" scale="1.1"></az-icon> Lap</th>
-      <th><az-icon name="small" scale="1.1"></az-icon> Small</th>
-      <th><az-icon name="desktop" scale="1.1"></az-icon> Desk</th>
-      <th><az-icon name="large" scale="1.1"></az-icon> Large</th>
+      <th><dd-icon name="smartphone" scale="0.8"></dd-icon> Palm</th>
+      <th><dd-icon name="tablet" scale="0.8"></dd-icon> Lap</th>
+      <th><dd-icon name="small" scale="0.8"></dd-icon> Small</th>
+      <th><dd-icon name="desktop" scale="0.8"></dd-icon> Desk</th>
+      <th><dd-icon name="monitor" scale="0.8"></dd-icon> Large</th>
     </tr>
     <tr>
       <td><div>.visible</div></td>
@@ -108,11 +108,11 @@ debes ocultar el elemento con la clase `.hidden` y luego indicar con la clase
   <table class='responsive__table'>
     <tr>
       <th>&nbsp;</th>
-      <th><az-icon name="palm" scale="1.1"></az-icon> Palm</th>
-      <th><az-icon name="lap" scale="1.1"></az-icon> Lap</th>
-      <th><az-icon name="small" scale="1.1"></az-icon> Small</th>
-      <th><az-icon name="desktop" scale="1.1"></az-icon> Desk</th>
-      <th><az-icon name="large" scale="1.1"></az-icon> Large</th>
+      <th><dd-icon name="smartphone" scale="0.8"></dd-icon> Palm</th>
+      <th><dd-icon name="tablet" scale="0.8"></dd-icon> Lap</th>
+      <th><dd-icon name="small" scale="0.8"></dd-icon> Small</th>
+      <th><dd-icon name="desktop" scale="0.8"></dd-icon> Desk</th>
+      <th><dd-icon name="monitor" scale="0.8"></dd-icon> Large</th>
     </tr>
     <tr>
       <td>.hidden</td>

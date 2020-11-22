@@ -76,7 +76,7 @@ ol {
     position: relative;
 
     &::before {
-      color: color(gray4);
+      color: $list-markers-color;
       content: counters(b, '.') ' ';
       counter-increment: b;
       left: quarter('-');
@@ -106,7 +106,7 @@ ul {
     position: relative;
 
     &::before {
-      background-color: color(gray4);
+      background-color: $list-markers-color;
       border-radius: 3px;
       content: '';
       display: block;

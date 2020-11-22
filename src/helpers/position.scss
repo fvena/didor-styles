@@ -3,50 +3,71 @@
 //
 // Modifica como se posiciona un elemento.
 //
-@each $position in ('static', 'relative', 'absolute') {
-  .position-#{$position} {
-    position: $position !important;
-  }
-}
+@each $breakpoint in $breakpoints-list {
+  @include media($breakpoint) {
+    $breakpoint: get-breakpoint-sufix($breakpoint);
 
-//
-// Posicionamiento fijo en la parte superior de la pantalla
-//
-.fixed-top {
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: $z-index-fixed;
-}
+    //
+    // Posicionamiento estático
+    //
+    .position#{$breakpoint}-static {
+      position: static !important;
+    }
 
-//
-// Posicionamiento fijo en la parte inferior de la pantalla
-//
-.fixed-bottom {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  z-index: $z-index-fixed;
-}
+    //
+    // Posicionamiento relativo
+    //
+    .position#{$breakpoint}-relative {
+      position: relative !important;
+    }
 
-//
-// Se posiciona de forma fija en la parte superior de la pantalla
-// cuando haciendo scroll llega a la parte superior
-//
-.sticky-top {
-  @supports (position: sticky) {
-    position: sticky;
-    top: 0;
-    z-index: $z-index-sticky;
-  }
-}
+    //
+    // Posicionamiento absoluto
+    //
+    .position#{$breakpoint}-absolute {
+      position: absolute !important;
+    }
 
-.sticky-bottom {
-  @supports (position: sticky) {
-    bottom: 0;
-    position: sticky;
-    z-index: $z-index-sticky;
+    //
+    // Posicionamiento fijo en la parte superior de la pantalla
+    //
+    .fixed#{$breakpoint}-top {
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: $z-index-fixed;
+    }
+
+    //
+    // Posicionamiento fijo en la parte inferior de la pantalla
+    //
+    .fixed#{$breakpoint}-bottom {
+      bottom: 0;
+      left: 0;
+      position: fixed;
+      right: 0;
+      z-index: $z-index-fixed;
+    }
+
+    //
+    // Se posiciona de forma fija en la parte superior de la pantalla
+    // cuando haciendo scroll llega a la parte superior
+    //
+    .sticky#{$breakpoint}-top {
+      @supports (position: sticky) {
+        position: sticky;
+        top: 0;
+        z-index: $z-index-sticky;
+      }
+    }
+
+    .sticky#{$breakpoint}-bottom {
+      @supports (position: sticky) {
+        bottom: 0;
+        position: sticky;
+        z-index: $z-index-sticky;
+      }
+    }
   }
 }
