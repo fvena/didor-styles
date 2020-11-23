@@ -2,6 +2,39 @@
  * TYPE MIXIN
  */
 
+//
+// Listado de familias tipográficas
+//
+
+$font-families: (
+  'base': $font-family-base,
+  'heading': $font-family-heading,
+  'monospace': $font-family-monospace,
+) !default;
+
+//
+// Listado de tamaños de fuente base por tamaño de pantalla
+//
+$root-sizes: (
+  'palm': $root-font-size-palm,
+  'lap': $root-font-size-lap,
+  'small': $root-font-size-small,
+  'desk': $root-font-size-desk,
+  'large': $root-font-size-large,
+) !default;
+
+//
+// Listado de pesos tipográficos
+//
+$font-weights: (
+  'extralight': $font-weight-extralight,
+  'light': $font-weight-ligh,
+  'normal': $font-weight-normal,
+  'semibold': $font-weight-semibold,
+  'bold': $font-weight-bold,
+  'black': $font-weight-black,
+) !default;
+
 /**
  * ROOTSIZE
  *
@@ -13,20 +46,15 @@
  * }
  */
 @mixin rootsize {
-  $base-breakpoints: desk;
-
-  // Compruebo si es mobile first
-  @if ($mobile-first) {
-    $base-breakpoints: palm;
-  }
-
   // Breakpoint base
-  font-size: calc(var(--root-font-size-#{$base-breakpoints}) / 16 * 100%);
+  font-size: #{$root-font-size-desk / 16px * 100%};
 
   // Recorre todos los breakpoint.
-  @each $breakpoint in $breakpoints-list {
-    @include media($breakpoint) {
-      font-size: calc(var(--root-font-size-#{$breakpoint}) / 16 * 100%);
+  @if ($responsive) {
+    @each $breakpoint, $size in $root-sizes {
+      @include media($breakpoint) {
+        font-size: #{$size / 16px * 100%};
+      }
     }
   }
 }
@@ -96,7 +124,7 @@
 //
 
 @function font-weight($weight) {
-  @return var(--font-weight-#{$weight});
+  @return map_get($font-weights, $weight);
 }
 
 //
@@ -108,5 +136,5 @@
 //
 
 @function font-family($family) {
-  @return var(--font-family-#{$family});
+  @return map_get($font-families, $family);
 }

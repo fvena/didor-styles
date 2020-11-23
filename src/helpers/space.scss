@@ -35,60 +35,62 @@
 //   .no-margin-bottom     // Quita el margen externo de abajo
 //
 
-@each $breakpoint in $breakpoints-list {
-  @include media($breakpoint) {
-    // Creo la cadena para formar el nombre de la clase
-    // Cuando afecta a todos los tamaños de pantalla, no se pone
-    $breakpoint: get-breakpoint-sufix($breakpoint);
+@if ($responsive) {
+  @each $breakpoint in $breakpoints-list {
+    @include media($breakpoint) {
+      // Creo la cadena para formar el nombre de la clase
+      // Cuando afecta a todos los tamaños de pantalla, no se pone
+      $breakpoint: get-breakpoint-sufix($breakpoint);
 
-    @each $property in ('margin', 'padding') {
-      @each $size, $length in $size-relative {
-        // Cuando no hay espaciado, se añade el prefijo indicando que no hay espaciado
-        $none: '';
+      @each $property in ('margin', 'padding') {
+        @each $size, $length in $size-relative {
+          // Cuando no hay espaciado, se añade el prefijo indicando que no hay espaciado
+          $none: '';
 
-        @if $size == 'none' {
-          $none: 'no-';
-        }
+          @if $size == 'none' {
+            $none: 'no-';
+          }
 
-        // Obtengo la cadena del tamaño para formar el nombre de la clase
-        $size: get-space-sufix($size);
+          // Obtengo la cadena del tamaño para formar el nombre de la clase
+          $size: get-space-sufix($size);
 
-        .#{$none}#{$property}#{$breakpoint}#{$size} {
-          #{$property}: #{$length} !important;
-        }
+          .#{$none}#{$property}#{$breakpoint}#{$size} {
+            #{$property}: #{$length} !important;
+          }
 
-        .#{$none}#{$property}-top#{$breakpoint}#{$size} {
-          #{$property}-top: #{$length} !important;
-        }
+          .#{$none}#{$property}-top#{$breakpoint}#{$size} {
+            #{$property}-top: #{$length} !important;
+          }
 
-        .#{$none}#{$property}-right#{$breakpoint}#{$size} {
-          #{$property}-right: #{$length} !important;
-        }
+          .#{$none}#{$property}-right#{$breakpoint}#{$size} {
+            #{$property}-right: #{$length} !important;
+          }
 
-        .#{$none}#{$property}-bottom#{$breakpoint}#{$size} {
-          #{$property}-bottom: #{$length} !important;
-        }
+          .#{$none}#{$property}-bottom#{$breakpoint}#{$size} {
+            #{$property}-bottom: #{$length} !important;
+          }
 
-        .#{$none}#{$property}-left#{$breakpoint}#{$size} {
-          #{$property}-left: #{$length} !important;
-        }
+          .#{$none}#{$property}-left#{$breakpoint}#{$size} {
+            #{$property}-left: #{$length} !important;
+          }
 
-        .#{$none}#{$property}-x#{$breakpoint}#{$size} {
-          #{$property}-right: #{$length} !important;
-          #{$property}-left: #{$length} !important;
-        }
+          .#{$none}#{$property}-x#{$breakpoint}#{$size} {
+            #{$property}-right: #{$length} !important;
+            #{$property}-left: #{$length} !important;
+          }
 
-        .#{$none}#{$property}-y#{$breakpoint}#{$size} {
-          #{$property}-top: #{$length} !important;
-          #{$property}-bottom: #{$length} !important;
+          .#{$none}#{$property}-y#{$breakpoint}#{$size} {
+            #{$property}-top: #{$length} !important;
+            #{$property}-bottom: #{$length} !important;
+          }
         }
       }
-    }
 
-    // Auto class
-    .margin#{$breakpoint}-auto {
-      margin-left: auto !important;
-      margin-right: auto !important;
+      // Auto class
+      .margin#{$breakpoint}-auto {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
     }
   }
 }

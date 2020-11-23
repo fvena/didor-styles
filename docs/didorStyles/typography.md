@@ -7,35 +7,48 @@ La tipografía es uno de los elementos más importantes en el diseño, Didor cue
 Cuando definas las variables Sass, cambia las siguientes variables con tus valores personalizados:
 
 ``` scss
-$font-family-base: 'Source Sans Pro';    // Familia tipográfica base para los contenidos.
-$font-family-heading: 'Source Sans Pro'; // Familia tipográfica para las cabeceras.
-$font-family-monospace: 'Fira Code';     // Familia tipográfica para los textos monoespaciados
-$line-height: 1.6;   // Altura de línea
-$modular-scale: 1.2; // Escala modular
-$letter-spacing: 0;  // Tracking, espacio entre caracteres
+/** Familias tipográficas */
+$font-family-base: 'Source Sans Pro';
+$font-family-heading: 'Source Sans Pro';
+$font-family-monospace: 'Fira Code';
+
+/** Tamaños de fuente por tamaño de pantalla en px */
+$root-font-size-palm: 15px;
+$root-font-size-lap: 16px;
+$root-font-size-small: 16px;
+$root-font-size-desk: 17px;
+$root-font-size-large: 17px;
+
+/** Pesos tipográficos */
+$font-weight-extralight: 200;
+$font-weight-ligh: 300;
+$font-weight-normal: normal;
+$font-weight-semibold: 600;
+$font-weight-bold: bold;
+$font-weight-black: 900;
+
+/** Altura de línea */
+$line-height: 1.6;
+
+/** Escala modular */
+$modular-scale: 1.2;
+
+/** Tracking, espacio entre caracteres */
+$letter-spacing: 0;
+
+/** Peso para las cabeceras */
+$font-weight-heading: $font-weight-bold;
 ```
 
-También puedes definir los tamaños base de la fuente para cada tamaño de pantalla:
+## Funciones
 
 ``` scss
-$root-font-size-palm: 15px;  // Tamaño base para dispositivos móviles
-$root-font-size-lap: 16px;   // Tamaño base para tabletas en vertical
-$root-font-size-small: 16px; // Tamaño base para tabletas en horizontal
-$root-font-size-desk: 17px;  // Tamaño base para monitores
-$root-font-size-large: 17px; // Tamaño base para monitores grandes
-```
-
-Así como los pesos tipográficos
-
-``` scss
-$font-weight-extralight: 200; // Muy fina
-$font-weight-ligh: 300;       // Fina
-$font-weight-normal: normal;  // Normal
-$font-weight-semibold: 600;   // Semi negrita
-$font-weight-bold: bold;      // Negrita
-$font-weight-black: 900;      // Gruesa
-
-$font-weight-heading: $font-weight-bold; // Peso tipográfico para las cabeceras
+.elemento {
+  font-family: font-family(heading);
+  font-size: font-size(h2); /** font-size(4) */
+  font-weight: font-weight(bold);
+  line-height: line-height(small1);
+}
 ```
 
 ## Tamaños de Fuente
@@ -53,7 +66,7 @@ Para definir los diferentes tamaños se ha establecido la siguiente escala:
 * `small1` - nivel -1
 * `small2` - nivel -2
 
-Notación: `.font-size-{breakpoint}-{size-name}`
+Notación: `.font-size-[breakpoint]-{size-name}`
 
 ::: demo
 <div class="font-size-h1 line-height-h1">Tamaño h1 (nivel 5)</div>
@@ -126,7 +139,7 @@ Texto abreviado <abbr title="HyperText Markup Language">HTML</abbr>
 
 Didor también permite alinear los elementos según el tamaño de pantalla:
 
-Notación: `.text-{breakpoint}-{position}`
+Notación: `.text-[breakpoint]-{position}`
 
 ::: demo
 <div class="text-left">Texto alineado a la izquierda</div>
@@ -258,7 +271,7 @@ La clase `.caption` también sirve para destacar un párrafo.
 <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod elementum enim, ac aliquet sem consectetur non. Integer suscipit lacus eu turpis sagittis, sit amet venenatis leo dignissim.</p>
 ```
 
-## Estilos de texto
+## Guía de estilos
 
 Una forma de controlar, simplificar y homogeneizar los textos de la aplicación consiste en definir todos los estilos de texto posibles en nuestro sistema de diseño, para ello mediante las siguientes variables podemos definir los tamaños, pesos y colores posibles, de forma que se autogeneren todas las clases con las combinaciones posibles o se puedan extender.
 
@@ -272,18 +285,18 @@ $styles-sizes: (
   'base': 0,
   'small1': -1,
   'small2': -2,
-) !default;
+);
 
 $styles-weights: (
   'regular': $font-weight-normal,
   'medium': $font-weight-bold,
-) !default;
+);
 
 $styles-colors: (
   'black': color(gray1),
   'gray': color(gray4),
-  'white': #ffffff,
-) !default;
+  'white': color(white),
+);
 ```
 
 Notación: `.{size}-{weight}-{color}`
@@ -352,16 +365,5 @@ Notación: `.{size}-{weight}-{color}`
 ``` scss
 .myStyle {
   @extend %base-medium-black;
-}
-```
-
-## Funciones
-
-``` scss
-.elemento {
-  font-family: font-family(heading);
-  font-size: font-size(h2); // font-size(4)
-  font-weight: font-weight(bold);
-  line-height: line-height(beta);
 }
 ```

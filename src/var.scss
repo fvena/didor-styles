@@ -6,8 +6,6 @@ $prefix: 'dd-';
 //
 // Paleta de colores
 //
-// Colores de marca, estado y neutros
-//
 
 //
 // Colores de Marca
@@ -74,7 +72,7 @@ $danger-lighter: hsl(6, 100%, 90%) !default;
 //
 $color-content: color(gray2) !default;
 $color-heading: color(gray1) !default;
-$color-caption: color(gray4) !default;
+$color-caption: color(gray3) !default;
 $color-background: color('white') !default;
 $color-link: color(brand) !default;
 $color-link-hover: color(brand-dark) !default;
@@ -93,44 +91,50 @@ $danger-gradient: 'danger-light', 'danger-dark';
 $light-gradient: 'gray7', 'gray5';
 $dark-gradient: 'gray4', 'gray2';
 
-:root {
-  //
-  // Tipografía
-  //
+//
+// Tipografía
+//
 
-  // Familias tipográficas
-  //
-  --font-family-base: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
-  --font-family-heading: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
-  --font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
+//
+// Familias tipográficas
+//
+$font-family-base: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
+$font-family-heading: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
+$font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
 
-  // Tamaños de fuente por tamaño de pantalla en px
-  // Importante: No poner las unidades (px)
-  //
-  --root-font-size-palm: 16;
-  --root-font-size-lap: 16;
-  --root-font-size-small: 16;
-  --root-font-size-desk: 17;
-  --root-font-size-large: 17;
+//
+// Tamaños de fuente por tamaño de pantalla en px
+//
+$root-font-size-palm: 16px;
+$root-font-size-lap: 16px;
+$root-font-size-small: 16px;
+$root-font-size-desk: 17px;
+$root-font-size-large: 17px;
 
-  // Pesos tipográficos
-  //
-  --font-weight-extralight: 200;
-  --font-weight-light: 300;
-  --font-weight-normal: normal;
-  --font-weight-semibold: 600;
-  --font-weight-bold: bold;
-  --font-weight-black: 900;
+//
+// Pesos tipográficos
+//
+$font-weight-extralight: 200;
+$font-weight-ligh: 300;
+$font-weight-normal: normal;
+$font-weight-semibold: 600;
+$font-weight-bold: bold;
+$font-weight-black: 900;
 
-  --font-weight-heading: var(--font-weight-bold);
-}
+//
+// Peso tipográfico de las cabeceras
+//
+$font-weight-heading: $font-weight-bold;
 
+//
 // Altura de linea
 //
 $line-height: 1.6 !default;
 
+//
 // Escala modular
 //
+
 // Valores sugeridos de escala (http://type-scale.com/)
 //
 //   second: 1.067
@@ -144,36 +148,19 @@ $line-height: 1.6 !default;
 //
 $modular-scale: 1.175 !default;
 
+//
 // Tracking
 //
 $letter-spacing: 0 !default;
 
+//
 // Color del texto silenciado
 //
-$text-muted: color(gray2) !default;
+$text-muted: color(gray4) !default;
 
-// Links
 //
-// $link-color: $color-primary !default;
-// $link-color-hover: darken-lightness($link-color, 20%) !default;
-$link-decoration: none !default;
-$link-decoration-hover: underline !default;
-
-// List
+// Estilos de texto
 //
-$list-markers-color: color(gray4) !default;
-
-// Tablas
-//
-$table-border-color: color(border);
-$table-header-color: color(gray2);
-$table-header-background: color(gray7);
-$table-striped-background: color(gray7);
-$table-hover-background: color(gray6);
-
-/**
- * Estilos de texto
- */
 $styles-sizes: (
   'h1': 5,
   'h2': 4,
@@ -186,19 +173,41 @@ $styles-sizes: (
 ) !default;
 
 $styles-weights: (
-  'normal': var(--font-weight-normal),
-  'bold': var(--font-weight-bold),
+  'normal': $font-weight-normal,
+  'bold': $font-weight-bold,
 ) !default;
 
 $styles-colors: (
   'black': color(gray1),
   'gray': color(gray4),
-  'white': #ffffff,
+  'white': color(white),
 ) !default;
 
-/**
- * SPACE AND LAYOUT SETTINGS
- */
+//
+// Links
+//
+// $link-color: $color-primary !default;
+// $link-color-hover: darken-lightness($link-color, 20%) !default;
+$link-decoration: none !default;
+$link-decoration-hover: underline !default;
+
+//
+// List
+//
+$list-markers-color: color(gray4) !default;
+
+//
+// Tablas
+//
+$table-border-color: color(border);
+$table-header-color: color(gray2);
+$table-header-background: color(gray7);
+$table-striped-background: color(gray7);
+$table-hover-background: color(gray6);
+
+//
+// Ajustes del layout
+//
 $grid-columns: 12 !default;
 $container-width-palm: 670px !default;
 $container-width-lap: 670px !default;
@@ -206,26 +215,29 @@ $container-width-small: 670px !default;
 $container-width-desk: 670px !default;
 $container-width-large: 670px !default;
 
+//
+// Espacio Base
+//
 $space: $line-height * 1rem !default;
 
-/**
-/* BORDES
-*/
+//
+// Bordes
+//
 $border-width: 1px !default;
 $border-style: solid !default;
 $border-color: color(gray6) !default;
 $border-radius: 10px !default;
 $border: $border-width $border-style color(border);
 
-/**
- * BLOCKQUOTE
- */
+//
+// Blockquote
+//
 $blockquote-color: color(gray4) !default;
 $blockquote-border-color: color(brand) !default;
 
-/**
- * CODE
- */
+//
+// Código
+//
 $code-color: color(gray7) !default;
 $code-background: color(gray2) !default;
 $inline-code-color: color(brand-dark) !default;
@@ -240,9 +252,9 @@ $blockquote-text-color: color(gray2) !default;
 $blockquote-footer-color: color(gray3) !default;
 $blockquote-border-color: color(brand) !default;
 
-/**
- * Z-INDEX OF LAYERS
- */
+//
+// z-index de capas
+//
 $z-index-negative: -1 !default;
 $z-index-page: 1 !default;
 $z-index-aside: 5 !default;
@@ -254,39 +266,32 @@ $z-index-modal: 15 !default;
 $z-index-popover: 20 !default;
 $z-index-tooltip: 25 !default;
 
+//
 // Transiciones
 //
 $transition-duration: 300ms !default;
 
-/**
- * RESPONSIVE SETTINGS
- */
+//
+// Responsive
+//
 
-/**
- * Breakpoints
- * Valor en em del tamaño máximo de pantalla
- *
- * Existen 5 tamaños de pantalla definidos:
- *   palm  - Móviles                                  (0 - 600px)
- *   lap   - Tablet verticales y Móviles horizontales (601px - 900px)
- *   small - Tablet horizontales                      (901px - 1200px)
- *   desk  - Portátiles y monitores pequeños          (1201px - 1600px)
- *   large - Monitores grandes                        (1601px - ...)
- */
+//
+// Indica si deben crearse clases responsive
+//
+$responsive: true !default;
 
+//
+// Breakpoints
+// Valor en em del tamaño máximo de pantalla
+//
+// Existen 5 tamaños de pantalla definidos:
+//   palm  - Móviles                                  (0 - 600px)
+//   lap   - Tablet verticales y Móviles horizontales (601px - 900px)
+//   small - Tablet horizontales                      (901px - 1200px)
+//   desk  - Portátiles y monitores pequeños          (1201px - 1600px)
+//   large - Monitores grandes                        (1601px - ...)
+//
 $palm: 600px !default; // ~37.5em
 $lap: 900px !default; // ~56.25em
 $small: 1200px !default; // ~75em
 $desk: 1600px !default; // ~100em
-
-/**
- * Mobile First
- *
- * Indica si se trata de un diseño siguiendo el enfoque Mobile First
- */
-$mobile-first: false !default;
-$responsive: true !default;
-
-.demo-container > * {
-  margin-bottom: 0;
-}

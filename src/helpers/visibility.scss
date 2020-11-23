@@ -21,29 +21,33 @@
 //   .visible-palm   // Muestra un elemento solo en tamaños de pantalla móviles
 //
 
-@each $breakpoint in $breakpoints-list {
-  @include media($breakpoint) {
-    $breakpoint: get-breakpoint-sufix($breakpoint);
+@if ($responsive) {
+  @each $breakpoint in $breakpoints-list {
+    @include media($breakpoint) {
+      $breakpoint: get-breakpoint-sufix($breakpoint);
 
-    .hidden#{$breakpoint} {
-      display: none !important;
+      .hidden#{$breakpoint} {
+        display: none !important;
+      }
     }
   }
 }
 
-@each $breakpoint in $breakpoints-list {
-  $breakpoint-chain: get-breakpoint-sufix($breakpoint);
+@if ($responsive) {
+  @each $breakpoint in $breakpoints-list {
+    $breakpoint-chain: get-breakpoint-sufix($breakpoint);
 
-  @if $breakpoint-chain == '' {
-    .visible {
-      display: block !important;
-    }
-  } @else {
-    .visible#{$breakpoint-chain} {
-      display: none !important;
-
-      @include media($breakpoint) {
+    @if $breakpoint-chain == '' {
+      .visible {
         display: block !important;
+      }
+    } @else {
+      .visible#{$breakpoint-chain} {
+        display: none !important;
+
+        @include media($breakpoint) {
+          display: block !important;
+        }
       }
     }
   }

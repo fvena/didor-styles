@@ -23,9 +23,11 @@ Puedes hacer que un elemento flote a la izquierda o la derecha fácilmente con l
 
 Puedes indicar como debe flotar un elemento para los diferentes tamaños de pantalla.
 
-* `.float-{palm|lap|small|desk|large}-left`
-* `.float-{palm|lap|small|desk|large}-right`
-* `.float-{palm|lap|small|desk|large}-none`
+```pug
+.float-{palm|lap|small|desk|large}-left
+.float-{palm|lap|small|desk|large}-right
+.float-{palm|lap|small|desk|large}-none
+```
 
 :::page--float--responsive
 <div class="clearfix">

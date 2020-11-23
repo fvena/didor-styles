@@ -19,18 +19,20 @@
 //   .display-palm-inline    // Oculta un elemento solo en tamaños de pantalla móviles
 //
 
-@each $breakpoint in $breakpoints-list {
-  @include media($breakpoint) {
-    $breakpoint: get-breakpoint-sufix($breakpoint);
+@if ($responsive) {
+  @each $breakpoint in $breakpoints-list {
+    @include media($breakpoint) {
+      $breakpoint: get-breakpoint-sufix($breakpoint);
 
-    .display#{$breakpoint}-inline {
-      display: inline !important;
-    }
-    .display#{$breakpoint}-inline-block {
-      display: inline-block !important;
-    }
-    .display#{$breakpoint}-block {
-      display: block !important;
+      .display#{$breakpoint}-inline {
+        display: inline !important;
+      }
+      .display#{$breakpoint}-inline-block {
+        display: inline-block !important;
+      }
+      .display#{$breakpoint}-block {
+        display: block !important;
+      }
     }
   }
 }

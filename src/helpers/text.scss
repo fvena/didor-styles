@@ -23,24 +23,26 @@
 // Modifican como se alinea el texto dentro un elemento.
 //
 
-@each $breakpoint in $breakpoints-list {
-  @include media($breakpoint) {
-    $breakpoint: get-breakpoint-sufix($breakpoint);
+@if ($responsive) {
+  @each $breakpoint in $breakpoints-list {
+    @include media($breakpoint) {
+      $breakpoint: get-breakpoint-sufix($breakpoint);
 
-    .text#{$breakpoint}-left {
-      text-align: left !important;
-    }
+      .text#{$breakpoint}-left {
+        text-align: left !important;
+      }
 
-    .text#{$breakpoint}-right {
-      text-align: right !important;
-    }
+      .text#{$breakpoint}-right {
+        text-align: right !important;
+      }
 
-    .text#{$breakpoint}-center {
-      text-align: center !important;
-    }
+      .text#{$breakpoint}-center {
+        text-align: center !important;
+      }
 
-    .text#{$breakpoint}-justify {
-      text-align: justify !important;
+      .text#{$breakpoint}-justify {
+        text-align: justify !important;
+      }
     }
   }
 }
@@ -76,13 +78,15 @@
 //
 // Tamaño
 //
-@each $breakpoint in $breakpoints-list {
-  @include media($breakpoint) {
-    $breakpoint: get-breakpoint-sufix($breakpoint);
+@if ($responsive) {
+  @each $breakpoint in $breakpoints-list {
+    @include media($breakpoint) {
+      $breakpoint: get-breakpoint-sufix($breakpoint);
 
-    @each $font-size-name, $font-size-value in $styles-sizes {
-      .font-size#{$breakpoint}-#{$font-size-name} {
-        font-size: font-size($font-size-name) !important;
+      @each $font-size-name, $font-size-value in $styles-sizes {
+        .font-size#{$breakpoint}-#{$font-size-name} {
+          font-size: font-size($font-size-name) !important;
+        }
       }
     }
   }
@@ -100,11 +104,11 @@
 
 //
 // Listado de pesos tipográficos
-$font-weights-list: 'extralight', 'light', 'normal', 'semibold', 'bold', 'black';
+// $font-weights-list: 'extralight', 'light', 'normal', 'semibold', 'bold', 'black';
 
-@each $font-weight in $font-weights-list {
-  .font-weight-#{$font-weight} {
-    font-weight: var(--font-weight-#{$font-weight}) !important;
+@each $font-weight-name, $font-weight-value in $font-weights {
+  .font-weight-#{$font-weight-name} {
+    font-weight: $font-weight-value !important;
   }
 }
 

@@ -14,9 +14,11 @@ $container-width: (
 ) !default;
 
 .container {
-  @each $breakpoint-name, $container-max-width in $container-width {
-    @include media($breakpoint-name) {
-      max-width: px2em($container-max-width);
+  @if ($responsive) {
+    @each $breakpoint-name, $container-max-width in $container-width {
+      @include media($breakpoint-name) {
+        max-width: px2em($container-max-width);
+      }
     }
   }
 }

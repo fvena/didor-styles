@@ -5,7 +5,8 @@ Modifica el tamaño de un elemento cuando lo necesites en altura y anchura.
 ## Configuración
 
 ```scss
-$space: $line-height * 1rem !default;
+/** Tamaño base*/
+$space: $line-height * 1rem;
 ```
 
 ## Funciones
@@ -181,4 +182,53 @@ Por defecto, Didor tiene definido varias clases para modificar el tamaño de un 
 <!-- AUTO -->
 <div class="width-auto">...</div>
 <div class="height-auto">...</div>
+```
+
+## Responsive
+
+Puedes indicar el tamaño de un elemento según el tamaño de la pantalla:
+
+```pug
+//- Anchura y Altura
+.width-[palm|lap|small|desk|large]-{sizeX|size%|auto}
+.height-[palm|lap|small|desk|large]-{sizeX|size%|auto}
+.vw-[palm|lap|small|desk|large]-{size%}
+.vh-[palm|lap|small|desk|large]-{size%}
+
+//- Anchura y Altura máxima
+.max-width-[palm|lap|small|desk|large]-{size%}
+.max-height-[palm|lap|small|desk|large]-{size%}
+.max-vw-[palm|lap|small|desk|large]-{size%}
+.max-vh-[palm|lap|small|desk|large]-{size%}
+```
+
+:::page--position
+  <div class="page-block-responsive width-60 width-palm-100">
+    <dd-icon name="smartphone" scale="0.8"></dd-icon>
+    Anchura 100% en móviles
+  </div>
+  <div class="page-block-responsive width-60 width-lap-100">
+    <dd-icon name="tablet" scale="0.8"></dd-icon>
+    Anchura 100% en tablet verticales
+  </div>
+  <div class="page-block-responsive width-60 width-small-100">
+    <dd-icon name="small" scale="0.8"></dd-icon>
+    Anchura 100% en tablet horizontales
+  </div>
+  <div class="page-block-responsive width-60 width-desk-100">
+    <dd-icon name="desktop" scale="0.8"></dd-icon>
+    Anchura 100% en pantallas
+  </div>
+  <div class="page-block-responsive width-60 width-large-100">
+    <dd-icon name="monitor" scale="0.8"></dd-icon>
+    Anchura 100% en pantallas grandes
+  </div>
+:::
+
+```html
+<div class="width-60 width-palm-100">Anchura 100% en móviles</div>
+<div class="width-60 width-lap-100">Anchura 100% en tablet verticales</div>
+<div class="width-60 width-small-100">Anchura 100% en tablet horizontales</div>
+<div class="width-60 width-desk-100">Anchura 100% en pantallas</div>
+<div class="width-60 width-large-100">Anchura 100% en pantallas grandes</div>
 ```

@@ -14,7 +14,7 @@ h6 {
   color: color(heading);
   font-family: font-family(heading);
   font-style: normal;
-  font-weight: var(--font-weight-heading);
+  font-weight: $font-weight-heading;
 }
 
 h1 {
@@ -78,8 +78,9 @@ small,
 // Texto resaltado
 mark,
 .mark {
-  background-color: color(mark-background);
-  color: color(mark);
+  background-color: color(gray7);
+  border-radius: $border-radius;
+  color: color(gray1);
   padding: quarter();
 }
 

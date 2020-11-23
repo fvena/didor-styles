@@ -77,13 +77,17 @@ Posiciona un elemento de forma fija en la parte inferior de la pantalla.
 
 Puedes indicar como debe posicionarse un elemento según el tamaño de la pantalla:
 
-* `.position-{palm|lap|small|desk|large}-static`
-* `.position-{palm|lap|small|desk|large}-relative`
-* `.position-{palm|lap|small|desk|large}-absolute`
-* `.fixed-{palm|lap|small|desk|large}-top`
-* `.fixed-{palm|lap|small|desk|large}-bottom`
-* `.sticky-{palm|lap|small|desk|large}-top`
-* `.sticky-{palm|lap|small|desk|large}-bottom`
+```pug
+.position-[palm|lap|small|desk|large]-static
+.position-[palm|lap|small|desk|large]-relative
+.position-[palm|lap|small|desk|large]-absolute
+
+.fixed-[palm|lap|small|desk|large]-top
+.fixed-[palm|lap|small|desk|large]-bottom
+
+.sticky-[palm|lap|small|desk|large]-top
+.sticky-[palm|lap|small|desk|large]-bottom
+```
 
 :::page--position
   <div class="page-block-responsive fixed-palm-bottom">

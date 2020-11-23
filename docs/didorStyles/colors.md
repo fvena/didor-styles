@@ -36,28 +36,28 @@ Por eso Didor permite configurar la escala de grises tanto en modo light como en
 
 ```scss
 /** Colores Neutros Light */
-$color-gray1-light: hsl(196, 25%, 12%) !default;
-$color-gray2-light: hsl(198, 17%, 28%) !default;
-$color-gray3-light: hsl(200, 10%, 46%) !default;
-$color-gray4-light: hsl(198, 7%, 64%) !default;
-$color-gray5-light: hsl(202, 13%, 83%) !default;
-$color-gray6-light: hsl(206, 17%, 92%) !default;
-$color-gray7-light: hsl(220, 18%, 97%) !default;
-$color-gray8-light: hsl(220, 20%, 99%) !default;
+$color-gray1-light: hsl(196, 25%, 12%);
+$color-gray2-light: hsl(198, 17%, 28%);
+$color-gray3-light: hsl(200, 10%, 46%);
+$color-gray4-light: hsl(198, 7%, 64%);
+$color-gray5-light: hsl(202, 13%, 83%);
+$color-gray6-light: hsl(206, 17%, 92%);
+$color-gray7-light: hsl(220, 18%, 97%);
+$color-gray8-light: hsl(220, 20%, 99%);
 
 /** Colores Neutros Dark */
-$color-gray1-dark: hsl(220, 12%, 99%) !default;
-$color-gray2-dark: hsl(220, 10%, 83%) !default;
-$color-gray3-dark: hsl(206, 8%, 65%) !default;
-$color-gray4-dark: hsl(202, 6%, 46%) !default;
-$color-gray5-dark: hsl(198, 8%, 28%) !default;
-$color-gray6-dark: hsl(200, 12%, 19%) !default;
-$color-gray7-dark: hsl(198, 17%, 14%) !default;
-$color-gray8-dark: hsl(196, 25%, 12%) !default;
+$color-gray1-dark: hsl(220, 12%, 99%);
+$color-gray2-dark: hsl(220, 10%, 83%);
+$color-gray3-dark: hsl(206, 8%, 65%);
+$color-gray4-dark: hsl(202, 6%, 46%);
+$color-gray5-dark: hsl(198, 8%, 28%);
+$color-gray6-dark: hsl(200, 12%, 19%);
+$color-gray7-dark: hsl(198, 17%, 14%);
+$color-gray8-dark: hsl(196, 25%, 12%);
 
 /** Blanco y Negro */
-$color-black: hsl(0, 0%, 0%) !default;
-$color-white: hsl(0, 0%, 100%) !default;
+$color-black: hsl(0, 0%, 0%);
+$color-white: hsl(0, 0%, 100%);
 ```
 
 <div class="page--color margin-top margin-bottom-triple">
@@ -269,9 +269,6 @@ Al igual que hemos hecho con el modo oscuro, podemos crear y aplicar otros temas
   --color-brand: #dd224e;
   --color-brand-light: #fb5067;
   --color-brand-lighter: #ff817a;
-
-  --font-family-base: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
-  --font-family-heading: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
 }
 
 [data-theme='blue'] {
@@ -280,8 +277,5 @@ Al igual que hemos hecho con el modo oscuro, podemos crear y aplicar otros temas
   --color-brand: #dd224e;
   --color-brand-light: #fb5067;
   --color-brand-lighter: #ff817a;
-
-  --font-family-base: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
-  --font-family-heading: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
 }
 ```

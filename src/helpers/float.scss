@@ -20,18 +20,20 @@
 //   .float-palm-left    // Flota un elemento a la izquierda solo en tamaños de pantalla móviles
 //
 
-@each $breakpoint in $breakpoints-list {
-  @include media($breakpoint) {
-    $breakpoint: get-breakpoint-sufix($breakpoint);
+@if ($responsive) {
+  @each $breakpoint in $breakpoints-list {
+    @include media($breakpoint) {
+      $breakpoint: get-breakpoint-sufix($breakpoint);
 
-    .float#{$breakpoint}-none {
-      float: none !important;
-    }
-    .float#{$breakpoint}-left {
-      float: left !important;
-    }
-    .float#{$breakpoint}-right {
-      float: right !important;
+      .float#{$breakpoint}-none {
+        float: none !important;
+      }
+      .float#{$breakpoint}-left {
+        float: left !important;
+      }
+      .float#{$breakpoint}-right {
+        float: right !important;
+      }
     }
   }
 }

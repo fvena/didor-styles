@@ -1,15 +1,5 @@
 # Responsive
 
-<!-- ## Movile o Desktop first
-
-Trabajar con _mobile first_, significa que el sitio web está originalmente optimizado para los dispositivos móviles y que la versión de escritorio es solo una adaptación de la versión móvil y lo mismo se aplica, aunque a la inversa, cuando pensamos en desktop first.
-
-Didor permite trabajar con los dos enfoques, basta con modificar el valor de la variable `$mobile-first` para alternar entre uno y otro.
-
-
-> Por defecto didor está configurado con el enfoque **Desktop First**. -->
-
-
 ## Tamaños de pantalla
 Didor tiene definidos cinco tamaños de pantalla.
 

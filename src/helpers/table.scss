@@ -36,50 +36,52 @@
 
 // responsive Table
 //
-@each $breakpoint in $breakpoints-list {
-  @include media($breakpoint) {
-    $breakpoint: get-breakpoint-sufix($breakpoint);
+@if ($responsive) {
+  @each $breakpoint in $breakpoints-list {
+    @include media($breakpoint) {
+      $breakpoint: get-breakpoint-sufix($breakpoint);
 
-    .table#{$breakpoint}--responsive {
-      thead {
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-      }
-
-      tr {
-        border-bottom: 3px solid $table-border-color;
-        display: block;
-        margin-bottom: half();
-      }
-
-      td {
-        border-bottom: 1px solid $table-border-color;
-        display: block;
-        text-align: right;
-
-        &:first-of-type {
-          background-color: $table-header-background;
-          border: 1px solid $table-border-color;
-          border-radius: $border-radius;
+      .table#{$breakpoint}--responsive {
+        thead {
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
         }
 
-        &:last-of-type {
-          border-bottom: 0;
+        tr {
+          border-bottom: 3px solid $table-border-color;
+          display: block;
+          margin-bottom: half();
         }
-      }
 
-      td::before {
-        color: $table-header-color;
-        content: attr(data-label);
-        float: left;
-        font-size: font-size(small2);
-        font-weight: font-weight(bold);
-        text-transform: uppercase;
+        td {
+          border-bottom: 1px solid $table-border-color;
+          display: block;
+          text-align: right;
+
+          &:first-of-type {
+            background-color: $table-header-background;
+            border: 1px solid $table-border-color;
+            border-radius: $border-radius;
+          }
+
+          &:last-of-type {
+            border-bottom: 0;
+          }
+        }
+
+        td::before {
+          color: $table-header-color;
+          content: attr(data-label);
+          float: left;
+          font-size: font-size(small2);
+          font-weight: font-weight(bold);
+          text-transform: uppercase;
+        }
       }
     }
   }

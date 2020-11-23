@@ -3,70 +3,72 @@
 //
 // Modifica como se posiciona un elemento.
 //
-@each $breakpoint in $breakpoints-list {
-  @include media($breakpoint) {
-    $breakpoint: get-breakpoint-sufix($breakpoint);
+@if ($responsive) {
+  @each $breakpoint in $breakpoints-list {
+    @include media($breakpoint) {
+      $breakpoint: get-breakpoint-sufix($breakpoint);
 
-    //
-    // Posicionamiento estático
-    //
-    .position#{$breakpoint}-static {
-      position: static !important;
-    }
-
-    //
-    // Posicionamiento relativo
-    //
-    .position#{$breakpoint}-relative {
-      position: relative !important;
-    }
-
-    //
-    // Posicionamiento absoluto
-    //
-    .position#{$breakpoint}-absolute {
-      position: absolute !important;
-    }
-
-    //
-    // Posicionamiento fijo en la parte superior de la pantalla
-    //
-    .fixed#{$breakpoint}-top {
-      left: 0;
-      position: fixed;
-      right: 0;
-      top: 0;
-      z-index: $z-index-fixed;
-    }
-
-    //
-    // Posicionamiento fijo en la parte inferior de la pantalla
-    //
-    .fixed#{$breakpoint}-bottom {
-      bottom: 0;
-      left: 0;
-      position: fixed;
-      right: 0;
-      z-index: $z-index-fixed;
-    }
-
-    //
-    // Se posiciona de forma fija en la parte superior de la pantalla
-    // cuando haciendo scroll llega a la parte superior
-    //
-    .sticky#{$breakpoint}-top {
-      @supports (position: sticky) {
-        position: sticky;
-        top: 0;
-        z-index: $z-index-sticky;
+      //
+      // Posicionamiento estático
+      //
+      .position#{$breakpoint}-static {
+        position: static !important;
       }
-    }
 
-    .sticky#{$breakpoint}-bottom {
-      @supports (position: sticky) {
+      //
+      // Posicionamiento relativo
+      //
+      .position#{$breakpoint}-relative {
+        position: relative !important;
+      }
+
+      //
+      // Posicionamiento absoluto
+      //
+      .position#{$breakpoint}-absolute {
+        position: absolute !important;
+      }
+
+      //
+      // Posicionamiento fijo en la parte superior de la pantalla
+      //
+      .fixed#{$breakpoint}-top {
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: $z-index-fixed;
+      }
+
+      //
+      // Posicionamiento fijo en la parte inferior de la pantalla
+      //
+      .fixed#{$breakpoint}-bottom {
         bottom: 0;
-        position: sticky;
-        z-index: $z-index-sticky;
+        left: 0;
+        position: fixed;
+        right: 0;
+        z-index: $z-index-fixed;
+      }
+
+      //
+      // Se posiciona de forma fija en la parte superior de la pantalla
+      // cuando haciendo scroll llega a la parte superior
+      //
+      .sticky#{$breakpoint}-top {
+        @supports (position: sticky) {
+          position: sticky;
+          top: 0;
+          z-index: $z-index-sticky;
+        }
+      }
+
+      .sticky#{$breakpoint}-bottom {
+        @supports (position: sticky) {
+          bottom: 0;
+          position: sticky;
+          z-index: $z-index-sticky;
+        }
       }
     }
   }
