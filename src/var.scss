@@ -10,11 +10,11 @@ $prefix: 'dd-';
 //
 // Colores de Marca
 //
-$brand-darker: hsl(338, 100%, 25%);
-$brand-dark: hsl(344, 79%, 41%);
-$brand: hsl(346, 73%, 50%);
-$brand-light: hsl(352, 96%, 65%);
-$brand-lighter: hsl(3, 100%, 74%);
+$brand-darker: hsl(338, 100%, 25%) !default;
+$brand-dark: hsl(344, 79%, 41%) !default;
+$brand: hsl(346, 73%, 50%) !default;
+$brand-light: hsl(352, 96%, 65%) !default;
+$brand-lighter: hsl(3, 100%, 74%) !default;
 
 //
 // Colores Neutros Light
@@ -74,8 +74,6 @@ $color-content: color(gray2) !default;
 $color-heading: color(gray1) !default;
 $color-caption: color(gray3) !default;
 $color-background: color('white') !default;
-$color-link: color(brand) !default;
-$color-link-hover: color(brand-dark) !default;
 $color-mark: color(content) !default;
 $color-mark-background: color(brand-a20) !default;
 $color-loading: color(brand) !default;
@@ -83,13 +81,13 @@ $color-loading: color(brand) !default;
 //
 // Gradientes
 //
-$brand-gradient: 'brand-light', 'brand-dark';
-$warning-gradient: 'warning-light', 'warning-dark';
-$success-gradient: 'success-light', 'success-dark';
-$danger-gradient: 'danger-light', 'danger-dark';
+$brand-gradient: 'brand-light', 'brand-dark' !default;
+$warning-gradient: 'warning-light', 'warning-dark' !default;
+$success-gradient: 'success-light', 'success-dark' !default;
+$danger-gradient: 'danger-light', 'danger-dark' !default;
 
-$light-gradient: 'gray7', 'gray5';
-$dark-gradient: 'gray4', 'gray2';
+$light-gradient: 'gray7', 'gray5' !default;
+$dark-gradient: 'gray4', 'gray2' !default;
 
 //
 // Tipografía
@@ -98,33 +96,33 @@ $dark-gradient: 'gray4', 'gray2';
 //
 // Familias tipográficas
 //
-$font-family-base: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
-$font-family-heading: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif;
-$font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace;
+$font-family-base: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif !default;
+$font-family-heading: 'Source Sans Pro', Helvetica Neue, Arial, sans-serif !default;
+$font-family-monospace: 'Fira Code', 'Courier New', Courier, monospace !default;
 
 //
 // Tamaños de fuente por tamaño de pantalla en px
 //
-$root-font-size-palm: 16px;
-$root-font-size-lap: 16px;
-$root-font-size-small: 16px;
-$root-font-size-desk: 17px;
-$root-font-size-large: 17px;
+$root-font-size-palm: 16px !default;
+$root-font-size-lap: 16px !default;
+$root-font-size-small: 16px !default;
+$root-font-size-desk: 17px !default;
+$root-font-size-large: 17px !default;
 
 //
 // Pesos tipográficos
 //
-$font-weight-extralight: 200;
-$font-weight-ligh: 300;
-$font-weight-normal: normal;
-$font-weight-semibold: 600;
-$font-weight-bold: bold;
-$font-weight-black: 900;
+$font-weight-extralight: 200 !default;
+$font-weight-ligh: 300 !default;
+$font-weight-normal: normal !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: bold !default;
+$font-weight-black: 900 !default;
 
 //
 // Peso tipográfico de las cabeceras
 //
-$font-weight-heading: $font-weight-bold;
+$font-weight-heading: $font-weight-bold !default;
 
 //
 // Altura de linea
@@ -186,24 +184,24 @@ $styles-colors: (
 //
 // Links
 //
-// $link-color: $color-primary !default;
-// $link-color-hover: darken-lightness($link-color, 20%) !default;
+$link-color: color(brand) !default;
+$link-color-hover: color(brand-dark) !default;
 $link-decoration: none !default;
 $link-decoration-hover: underline !default;
 
 //
 // List
 //
-$list-markers-color: color(gray4) !default;
+$list-markers-color: color(brand) !default;
 
 //
 // Tablas
 //
-$table-border-color: color(border);
-$table-header-color: color(gray2);
-$table-header-background: color(gray7);
-$table-striped-background: color(gray7);
-$table-hover-background: color(gray6);
+$table-border-color: color(border) !default;
+$table-header-color: color(gray2) !default;
+$table-header-background: color(gray7) !default;
+$table-striped-background: color(gray7) !default;
+$table-hover-background: color(gray6) !default;
 
 //
 // Ajustes del layout
@@ -227,7 +225,7 @@ $border-width: 1px !default;
 $border-style: solid !default;
 $border-color: color(gray6) !default;
 $border-radius: 10px !default;
-$border: $border-width $border-style color(border);
+$border: $border-width $border-style color(border) !default;
 
 //
 // Blockquote

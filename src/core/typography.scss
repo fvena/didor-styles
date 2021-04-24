@@ -14,7 +14,7 @@ h6 {
   color: color(heading);
   font-family: font-family(heading);
   font-style: normal;
-  font-weight: $font-weight-heading;
+  font-weight: var(--font-weight-heading);
 }
 
 h1 {

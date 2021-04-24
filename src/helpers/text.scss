@@ -99,10 +99,6 @@
 }
 
 //
-// Apariencia
-//
-
-//
 // Listado de pesos tipográficos
 // $font-weights-list: 'extralight', 'light', 'normal', 'semibold', 'bold', 'black';
 
@@ -111,6 +107,10 @@
     font-weight: $font-weight-value !important;
   }
 }
+
+//
+// Apariencia
+//
 
 .font-italic {
   font-style: italic !important;

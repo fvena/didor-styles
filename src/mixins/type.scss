@@ -16,6 +16,7 @@ $font-families: (
 // Listado de tamaños de fuente base por tamaño de pantalla
 //
 $root-sizes: (
+  'all': $root-font-size-desk,
   'palm': $root-font-size-palm,
   'lap': $root-font-size-lap,
   'small': $root-font-size-small,
@@ -46,10 +47,6 @@ $font-weights: (
  * }
  */
 @mixin rootsize {
-  // Breakpoint base
-  font-size: #{$root-font-size-desk / 16px * 100%};
-
-  // Recorre todos los breakpoint.
   @if ($responsive) {
     @each $breakpoint, $size in $root-sizes {
       @include media($breakpoint) {

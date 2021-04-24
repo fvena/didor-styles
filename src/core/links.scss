@@ -8,18 +8,19 @@ a img {
 
 a,
 .link {
-  color: color(link);
+  color: $link-color;
+  cursor: pointer;
   text-decoration: $link-decoration;
   transition: color $transition-duration, background-color $transition-duration;
 
   @include hover {
-    color: color(link-hover);
+    color: $link-color-hover;
     text-decoration: $link-decoration-hover;
   }
 
   &:active,
   &:focus {
-    color: color(link-hover);
+    color: $link-color-hover;
     text-decoration: $link-decoration;
   }
 

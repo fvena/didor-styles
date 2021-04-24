@@ -13,7 +13,7 @@ $space: $line-height * 1rem;
 
 Podemos definir un tamaño o espaciado en nuestros archivos `sass` mediante la función `size(...)`. Esta función nos devolverá el valor indicado multiplicado por nuestro tamaño base.
 
-Admite cualquier valor númerico, incluidos números negativos.
+Admite cualquier valor numérico, incluidos números negativos.
 
 ::: page--size
   <div><div class="page-block display-inline-block no-padding width-quarter"></div>quarter() => 1/4x</div>
@@ -28,8 +28,8 @@ Admite cualquier valor númerico, incluidos números negativos.
 
 ``` scss
 .elemento1 {
-  width: size(1/2);
   height: size(2);
+  width: size(1/2);
 }
 
 .elemento2 {
@@ -45,7 +45,7 @@ También existen funciones con los nombres estandarizados, para mejorar la semá
 
 ``` scss
 width: quarter();    // 1/4 * $space
-width: half();      // 1/2 * $space
+width: half();       // 1/2 * $space
 width: simple();     // $space
 width: double();     // 2 * $space
 width: triple();     // 3 * $space
@@ -56,8 +56,8 @@ width: sextuple();   // 6 * $space
 
 ``` scss
 .elemento1 {
-  width: quarter();
   height: double();
+  width: quarter();
 }
 
 .elemento2 {
@@ -113,6 +113,7 @@ Es una técnica utilizada en diseño editorial, y garantiza que todos los espaci
 ## Valores Porcentuales
 
 También existen tamaños predefinidos proporcionales al elemento padre o a la ventana del navegador
+
 ### Decenas
 
 ::: page--size
@@ -153,7 +154,7 @@ Por defecto, Didor tiene definido varias clases para modificar el tamaño de un 
 <!-- RELATIVOS -->
 <!-- quarter -->
 <!-- half -->
-<!-- simple -->
+<!-- simple || '' -->
 <!-- double -->
 <!-- triple -->
 <!-- quadruple -->

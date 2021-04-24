@@ -63,11 +63,11 @@ $size-percentages: (
       //
       @each $size, $length in $size-percentages {
         .width#{$breakpoint}-#{$size} {
-          width: #{$length}% !important;
+          width: #{$length * 1%} !important;
         }
 
         .height#{$breakpoint}-#{$size} {
-          height: #{$length}% !important;
+          height: #{$length * 1%} !important;
         }
 
         .vw#{$breakpoint}-#{$size} {
@@ -79,11 +79,11 @@ $size-percentages: (
         }
 
         .max-height#{$breakpoint}-#{$size} {
-          max-height: #{$length}% !important;
+          max-height: #{$length * 1%} !important;
         }
 
         .max-width#{$breakpoint}-#{$size} {
-          max-width: #{$length}% !important;
+          max-width: #{$length * 1%} !important;
         }
 
         .max-vw#{$breakpoint}-#{$size} {
