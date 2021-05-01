@@ -23,7 +23,7 @@ module.exports = {
     'no-empty-source': null,
     'color-hex-length': 'long',
     'no-duplicate-selectors': null,
-    'max-nesting-depth': 3,
+    'max-nesting-depth': 4,
     // ===
     // PRETTIER
     // ===
