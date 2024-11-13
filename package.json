@@ -1,0 +1,63 @@
+{
+  "name": "@didor/styles",
+  "version": "3.0.0",
+  "description": "A flexible and fully configurable SCSS framework for consistent styling, utility class generation, and easy-to-use style guides",
+  "keywords": [
+    "scss",
+    "css",
+    "framework",
+    "scss-framework",
+    "utility-first",
+    "style-guide",
+    "responsive-design",
+    "design-system",
+    "sass",
+    "helpers",
+    "mixins",
+    "functions",
+    "customizable",
+    "toolkit"
+  ],
+  "homepage": "https://github.com/fvena/didor-styles#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvena/didor-styles.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Francisco Vena",
+    "email": "fvena32@gmail.com",
+    "url": "http://www.fvena.com/"
+  },
+  "main": "main.scss",
+  "scripts": {
+    "build": "sass --load-path=./scss/didor main.scss dist/didor.css --no-source-map --color --style compressed",
+    "dev": "sass --load-path=./scss/didor main.scss dist/didor.css --watch --no-source-map --color",
+    "prepare": "husky",
+    "prettier": "prettier --check ./scss",
+    "semantic-release": "semantic-release",
+    "stylelint": "stylelint scss/**/*.scss --fix"
+  },
+  "lint-staged": {
+    "*": "prettier -w --ignore-unknown"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.3.3",
+    "prettier-plugin-packagejson": "^2.5.3",
+    "sass": "^1.80.7",
+    "semantic-release": "^24.2.0",
+    "stylelint": "^16.10.0",
+    "stylelint-config-recess-order": "^5.1.1",
+    "stylelint-config-recommended": "^14.0.1",
+    "stylelint-config-recommended-scss": "^14.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
